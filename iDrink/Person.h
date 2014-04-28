@@ -10,10 +10,10 @@
 #import "Session.h"
 
 @interface Person : NSObject{
-    NSNumber *weight;
-    NSString *gender;
-    NSNumber *matabRate;
-    NSNumber *age;
+    double weight;
+    NSInteger *gender;
+    double matabRate;
+    double age;
     Session *session;
     //UsageSettings *usageSettings;
     NSInteger alarm;
@@ -21,12 +21,12 @@
 //old function
 //new refactored functions
 -(void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage;
--(void)setGender:(NSString*)newGender;
--(void)setAge:(NSNumber*)newAge;
--(void)setWeight:(NSNumber*)newWeight;
+-(void)setGender:(NSInteger*)newGender;
+-(void)setAge:(double)newAge;
+-(void)setWeight:(double)newWeight;
 -(void)checkStats;
--(NSString*)getGender;
--(NSNumber*)getWeight;
--(NSNumber*)getAge;
+-(NSInteger*)getGender;
+-(double)getWeight;
+-(double)getAge;
 -(Session*)getSession;
 @end

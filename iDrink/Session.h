@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "Statistics.h"
 
-@interface Session : NSObject
-@property (nonatomic, retain) NSMutableArray *drinksDrank;
-@property (nonatomic, retain) Statistics *stats;
+@interface Session : NSObject{
+    NSMutableArray *drinksDrank;
+    Statistics *stats;
+    int numDrinks;
+
+}
 
 +(void)addDrink;
 +(void)removeDrink;
+-(int)getNumDrinks;
 
 @end
