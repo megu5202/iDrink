@@ -10,7 +10,7 @@
 #import "Person.h"
 
 @interface Statistics : NSObject{
-    double *BACValue;
+    double BACValue;
     NSString *BACMessage;
     NSDate *timeTillSober;
     Person *person;

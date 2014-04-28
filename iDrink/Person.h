@@ -11,7 +11,7 @@
 
 @interface Person : NSObject{
     double weight;
-    NSInteger *gender;
+    NSInteger gender;
     double matabRate;
     double age;
     Session *session;
@@ -21,11 +21,11 @@
 //old function
 //new refactored functions
 -(void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage;
--(void)setGender:(NSInteger*)newGender;
+-(void)setGender:(NSInteger)newGender;
 -(void)setAge:(double)newAge;
 -(void)setWeight:(double)newWeight;
 -(void)checkStats;
--(NSInteger*)getGender;
+-(NSInteger)getGender;
 -(double)getWeight;
 -(double)getAge;
 -(Session*)getSession;
