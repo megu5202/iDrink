@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B154700190DEDBC009323C5 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F7190DEDBC009323C5 /* Drink.m */; };
+		3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F9190DEDBC009323C5 /* DrinkInfo.m */; };
+		3B154702190DEDBC009323C5 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FB190DEDBC009323C5 /* Profile.m */; };
+		3B154703190DEDBC009323C5 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FD190DEDBC009323C5 /* Session.m */; };
+		3B154704190DEDBC009323C5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FF190DEDBC009323C5 /* Statistics.m */; };
 		A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
 		A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */; };
 		A1A22AD5190DE2DD0019BD5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD4190DE2DD0019BD5D /* UIKit.framework */; };
@@ -39,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B1546F6190DEDBC009323C5 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
+		3B1546F7190DEDBC009323C5 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
+		3B1546F8190DEDBC009323C5 /* DrinkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkInfo.h; sourceTree = "<group>"; };
+		3B1546F9190DEDBC009323C5 /* DrinkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkInfo.m; sourceTree = "<group>"; };
+		3B1546FA190DEDBC009323C5 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		3B1546FB190DEDBC009323C5 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		3B1546FC190DEDBC009323C5 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		3B1546FD190DEDBC009323C5 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		3B1546FE190DEDBC009323C5 /* Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statistics.h; sourceTree = "<group>"; };
+		3B1546FF190DEDBC009323C5 /* Statistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statistics.m; sourceTree = "<group>"; };
 		A1A22ACD190DE2DD0019BD5D /* iDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A22AD0190DE2DD0019BD5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +142,16 @@
 		A1A22AD6190DE2DD0019BD5D /* iDrink */ = {
 			isa = PBXGroup;
 			children = (
+				3B1546F6190DEDBC009323C5 /* Drink.h */,
+				3B1546F7190DEDBC009323C5 /* Drink.m */,
+				3B1546F8190DEDBC009323C5 /* DrinkInfo.h */,
+				3B1546F9190DEDBC009323C5 /* DrinkInfo.m */,
+				3B1546FA190DEDBC009323C5 /* Profile.h */,
+				3B1546FB190DEDBC009323C5 /* Profile.m */,
+				3B1546FC190DEDBC009323C5 /* Session.h */,
+				3B1546FD190DEDBC009323C5 /* Session.m */,
+				3B1546FE190DEDBC009323C5 /* Statistics.h */,
+				3B1546FF190DEDBC009323C5 /* Statistics.m */,
 				A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */,
 				A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */,
 				A1A22AE2190DE2DD0019BD5D /* Main.storyboard */,
@@ -274,12 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B154702190DEDBC009323C5 /* Profile.m in Sources */,
+				3B154704190DEDBC009323C5 /* Statistics.m in Sources */,
+				3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */,
 				A1A22AEA190DE2DD0019BD5D /* SecondViewController.m in Sources */,
 				A1A22B11190DE53F0019BD5D /* AddDrinkViewController.m in Sources */,
 				A1A22B13190DE53F0019BD5D /* ProfileViewController.m in Sources */,
 				A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */,
 				A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */,
 				A1A22B0A190DE33E0019BD5D /* TabBarController.m in Sources */,
+				3B154703190DEDBC009323C5 /* Session.m in Sources */,
+				3B154700190DEDBC009323C5 /* Drink.m in Sources */,
 				A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */,
 				A1A22ADD190DE2DD0019BD5D /* main.m in Sources */,
 			);
@@ -409,6 +439,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
 				INFOPLIST_FILE = "iDrink/iDrink-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -422,6 +453,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
 				INFOPLIST_FILE = "iDrink/iDrink-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +475,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "iDrinkTests/iDrinkTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -461,6 +494,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
 				INFOPLIST_FILE = "iDrinkTests/iDrinkTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -486,6 +520,7 @@
 				A1A22B04190DE2DD0019BD5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1A22B05190DE2DD0019BD5D /* Build configuration list for PBXNativeTarget "iDrinkTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +529,7 @@
 				A1A22B07190DE2DD0019BD5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
