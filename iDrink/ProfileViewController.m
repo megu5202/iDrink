@@ -56,8 +56,8 @@
     [alertView show];
 }
 
-- (void)sendDataToTabViewController{
-    //NSLog(@"MADFirstViewController - sendDataToTabViewController");
+- (void)sendDataToPerson{
+    NSLog(@"ProfileViewController - sendDataToPerson");
     //get data from entry fields
     NSInteger gender = _gender.selectedSegmentIndex;
     double weight = [_weightField.text doubleValue];
@@ -78,32 +78,27 @@
     }
     
     //update data:
-    /*
-    [(MADTabViewController*)self.tabBarController updateStats:gender :weight :age];
-    [(MADTabViewController*)self.tabBarController updateBAC];
-    double bac = [(MADTabViewController*)self.tabBarController getBAC];
-    [(MADTabViewController*)self.tabBarController updateDrunkenness: bac];
-     */
-    //[(Person*)self.tabBarController setGender:gender];
-    //[(Person*)self.tabBarController setWeight:weight];
-    //[(Person*)self.tabBarController setAge:age];
+    [(Person*)self.tabBarController setGender:gender];
+    [(Person*)self.tabBarController setWeight:weight];
+    [(Person*)self.tabBarController setAge:age];
 }
 
 /* called when background is tapped */
 - (void)dismissKeyboard{
     NSLog(@"ProfileViewController - dismissKeyboard");
-    //[self sendDataToTabViewController];
+    [self sendDataToPerson];
     [_weightField resignFirstResponder];
     [_ageField resignFirstResponder];
 }
 
 -(IBAction)genderChanged:(UISegmentedControl *)sender{
     NSLog(@"ProfileViewController - genderChanged");
-    //Call Person.setGender(kjshdfkj)
+    [self sendDataToPerson];
 }
 
 -(IBAction)frequencyChanged:(UISegmentedControl *)sender{
     NSLog(@"ProfileViewController - frequencyChanged");
+    [self sendDataToPerson];
 }
 
 
