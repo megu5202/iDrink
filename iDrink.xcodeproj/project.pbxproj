@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		3B154700190DEDBC009323C5 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F7190DEDBC009323C5 /* Drink.m */; };
 		3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F9190DEDBC009323C5 /* DrinkInfo.m */; };
-		3B154702190DEDBC009323C5 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FB190DEDBC009323C5 /* Profile.m */; };
 		3B154703190DEDBC009323C5 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FD190DEDBC009323C5 /* Session.m */; };
 		3B154704190DEDBC009323C5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FF190DEDBC009323C5 /* Statistics.m */; };
+		3B154707190DEE2C009323C5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B154706190DEE2C009323C5 /* Person.m */; };
 		A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
 		A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */; };
 		A1A22AD5190DE2DD0019BD5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD4190DE2DD0019BD5D /* UIKit.framework */; };
@@ -48,12 +48,12 @@
 		3B1546F7190DEDBC009323C5 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		3B1546F8190DEDBC009323C5 /* DrinkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkInfo.h; sourceTree = "<group>"; };
 		3B1546F9190DEDBC009323C5 /* DrinkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkInfo.m; sourceTree = "<group>"; };
-		3B1546FA190DEDBC009323C5 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
-		3B1546FB190DEDBC009323C5 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		3B1546FC190DEDBC009323C5 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		3B1546FD190DEDBC009323C5 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		3B1546FE190DEDBC009323C5 /* Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statistics.h; sourceTree = "<group>"; };
 		3B1546FF190DEDBC009323C5 /* Statistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statistics.m; sourceTree = "<group>"; };
+		3B154705190DEE2C009323C5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		3B154706190DEE2C009323C5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		A1A22ACD190DE2DD0019BD5D /* iDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A22AD0190DE2DD0019BD5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +109,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B154708190DEE43009323C5 /* view contollers */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22B08190DE33E0019BD5D /* TabBarController.h */,
+				A1A22B09190DE33E0019BD5D /* TabBarController.m */,
+				A1A22B0F190DE53F0019BD5D /* ProfileViewController.h */,
+				A1A22B10190DE53F0019BD5D /* ProfileViewController.m */,
+				A1A22B0D190DE53F0019BD5D /* BACViewController.h */,
+				A1A22B0E190DE53F0019BD5D /* BACViewController.m */,
+				A1A22B0B190DE53F0019BD5D /* AddDrinkViewController.h */,
+				A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */,
+				A1A22AE5190DE2DD0019BD5D /* FirstViewController.h */,
+				A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */,
+				A1A22AE8190DE2DD0019BD5D /* SecondViewController.h */,
+				A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */,
+			);
+			name = "view contollers";
+			sourceTree = "<group>";
+		};
 		A1A22AC4190DE2DD0019BD5D = {
 			isa = PBXGroup;
 			children = (
@@ -142,12 +161,13 @@
 		A1A22AD6190DE2DD0019BD5D /* iDrink */ = {
 			isa = PBXGroup;
 			children = (
+				3B154708190DEE43009323C5 /* view contollers */,
+				3B154705190DEE2C009323C5 /* Person.h */,
+				3B154706190DEE2C009323C5 /* Person.m */,
 				3B1546F6190DEDBC009323C5 /* Drink.h */,
 				3B1546F7190DEDBC009323C5 /* Drink.m */,
 				3B1546F8190DEDBC009323C5 /* DrinkInfo.h */,
 				3B1546F9190DEDBC009323C5 /* DrinkInfo.m */,
-				3B1546FA190DEDBC009323C5 /* Profile.h */,
-				3B1546FB190DEDBC009323C5 /* Profile.m */,
 				3B1546FC190DEDBC009323C5 /* Session.h */,
 				3B1546FD190DEDBC009323C5 /* Session.m */,
 				3B1546FE190DEDBC009323C5 /* Statistics.h */,
@@ -155,18 +175,6 @@
 				A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */,
 				A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */,
 				A1A22AE2190DE2DD0019BD5D /* Main.storyboard */,
-				A1A22B08190DE33E0019BD5D /* TabBarController.h */,
-				A1A22B09190DE33E0019BD5D /* TabBarController.m */,
-				A1A22B0F190DE53F0019BD5D /* ProfileViewController.h */,
-				A1A22B10190DE53F0019BD5D /* ProfileViewController.m */,
-				A1A22B0D190DE53F0019BD5D /* BACViewController.h */,
-				A1A22B0E190DE53F0019BD5D /* BACViewController.m */,
-				A1A22B0B190DE53F0019BD5D /* AddDrinkViewController.h */,
-				A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */,
-				A1A22AE5190DE2DD0019BD5D /* FirstViewController.h */,
-				A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */,
-				A1A22AE8190DE2DD0019BD5D /* SecondViewController.h */,
-				A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */,
 				A1A22AEB190DE2DD0019BD5D /* Images.xcassets */,
 				A1A22AD7190DE2DD0019BD5D /* Supporting Files */,
 			);
@@ -299,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B154702190DEDBC009323C5 /* Profile.m in Sources */,
 				3B154704190DEDBC009323C5 /* Statistics.m in Sources */,
 				3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */,
 				A1A22AEA190DE2DD0019BD5D /* SecondViewController.m in Sources */,
@@ -309,6 +316,7 @@
 				A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */,
 				A1A22B0A190DE33E0019BD5D /* TabBarController.m in Sources */,
 				3B154703190DEDBC009323C5 /* Session.m in Sources */,
+				3B154707190DEE2C009323C5 /* Person.m in Sources */,
 				3B154700190DEDBC009323C5 /* Drink.m in Sources */,
 				A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */,
 				A1A22ADD190DE2DD0019BD5D /* main.m in Sources */,
