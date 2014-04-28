@@ -19,7 +19,7 @@
 -(Person*)getPerson;
 -(void)setPerson:(Person*)person;
 -(Session*)getSession;
--(void)setSesion:(Session*)session;
+-(void)setSesion:(Session*)newSession;
 
 @property (strong, nonatomic) UIWindow *window;
 

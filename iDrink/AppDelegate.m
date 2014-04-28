@@ -16,9 +16,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     p = [[Person alloc]init];
-    [p setGender:1];
+    [p setGender:0];
     [p setWeight:150];
     [p setAge:21];
+    
+    session = [[Session alloc]init];
+    [session setNumDrinks:0];
+    
     return YES;
 }
 
@@ -60,6 +64,14 @@
     [p setWeight:personWeight];
     [p setAge:personAge];
     [p setGender:personGender];
+}
+
+-(Session*)getSession{
+    return session;
+}
+-(void)setSesion:(Session*)newSession{
+    int newSessionNumDrinks = [newSession getNumDrinks];
+    [session setNumDrinks:newSessionNumDrinks];
 }
 
 @end

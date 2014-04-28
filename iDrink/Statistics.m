@@ -11,14 +11,15 @@
 @implementation Statistics
 
 
--(void)calculateBAC: (double)weight :(NSInteger*)gender :(double)numDrinks :(double)hoursPassed{
+-(double)calculateBAC: (double)weight :(NSInteger)gender :(int)numDrinks :(double)hoursPassed{
     NSLog(@"updateBAC");
     double bac = 0;
     double bodyWaterConstant = 0;
     double drinkingPeriod = 1;
     double weightInKilos = weight/2.20462;
+    NSInteger genderComp = 1;
     
-    if(gender == 1){
+    if(gender == genderComp){
         bodyWaterConstant = 0.49;
     }
     else{
@@ -26,6 +27,7 @@
     }
     bac = ((.806 * numDrinks * 1.2)/(bodyWaterConstant * weightInKilos)) - (.017 * drinkingPeriod);
     [self setBACNumber:bac];
+    return bac;
 }
 -(void)evaluateBAC{
     

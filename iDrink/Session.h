@@ -9,18 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "Statistics.h"
 #import "Drink.h"
-#import "Person.h"
 
 @interface Session : NSObject{
     NSMutableArray *drinksDrank;
     Statistics *stats;
-    Person *person;
     Drink *drink;
     int numDrinks;
 }
 
-+(void)addDrink;
-+(void)removeDrink;
+-(void)addDrink;
+-(void)removeDrink;
+
 -(int)getNumDrinks;
+-(void)setNumDrinks:(int)newNumDrinks;
+
+-(double)getBAC: (double)weight :(NSInteger)gender :(double)hoursPassed;
+-(NSString*)getBACMessage;
+
 
 @end

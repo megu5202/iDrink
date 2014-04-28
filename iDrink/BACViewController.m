@@ -43,13 +43,26 @@
     //_baessage.text = bacMessage;
     AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
     person = appDelegate.getPerson;
+    session = appDelegate.getSession;
+    
     NSInteger gender = [person getGender];
     double weight = [person getWeight];
     double age = [person getAge];
     
+    //test bac calc
+    [session addDrink];
+    [session addDrink];
+    double bac = [session getBAC:weight :gender :3];
+    int drinksRecorded = [session getNumDrinks];
+    
     _genderOut.text = [NSString stringWithFormat:@"%d", gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
+    _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
+    _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinksRecorded];
+    NSLog(@"drinks recorded is %d", drinksRecorded);
+    _hoursOut.text = [NSString stringWithFormat:@"%.3d", 3];
+    [appDelegate setSesion:session];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{

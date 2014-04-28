@@ -8,9 +8,7 @@
 
 #import "TabBarController.h"
 
-@interface ProfileViewController : TabBarController{
-    //Person *person;
-}
+@interface ProfileViewController : TabBarController
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *gender;
 @property (weak, nonatomic) IBOutlet UITextField *weightField;
