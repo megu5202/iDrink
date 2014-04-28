@@ -10,48 +10,47 @@
 
 @implementation Person
 
--(id)initWithGender:(NSString *)gender personWeight:(NSNumber *)weight
-{
-    self = [super init];
-    if (self) {
-        _gender = gender;
-        _weight = [NSNumber numberWithFloat: [weight floatValue]];
-        _matabRate = [NSNumber numberWithFloat:(0.015/60/60)];
-        _alarm = 0;
-    }
-    
-    return self;
+- (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage{
+    UIAlertView* alertView = [[UIAlertView alloc]
+                              initWithTitle: alertTitle
+                              message: alertMessage
+                              delegate:self
+                              cancelButtonTitle: @"Ok"
+                              otherButtonTitles: nil];
+    [alertView show];
+    // *********** if alert title is "error" - make first view appear!
 }
 
-+(void)setGender:(NSString*)newGender{
-    
+-(void)setGender:(NSString*)newGender{
+    gender = newGender;
 }
-+(void)setAge:(NSNumber*)age{
-    
+-(void)setAge:(NSNumber*)newAge{
+    age = newAge;
 }
-+(void)setWeight:(NSNumber*)weight{
-    
+-(void)setWeight:(NSNumber*)newWeight{
+    weight = newWeight;
 }
-+(void)checkStats{
-    
+-(void)checkStats{
+    NSNumber *weightMin = [NSNumber numberWithInt:20];
+    NSNumber *ageMin = [NSNumber numberWithInt:20];
+    if (age >= ageMin && weight > weightMin) {
+        //age is good
+    }
+    else{
+        [self sendAlert:@"Error" : @"Please enter a valid weight or age."];
+    }
 }
-+(void)newSession{
-    
+-(NSString*)getGender{
+    return gender;
 }
-+(void)deleteSession{
-    
+-(NSNumber*)getWeight{
+    return weight;
 }
-+(NSString*)getGender{
-    
+-(NSNumber*)getAge{
+    return age;
 }
-+(NSNumber*)getWeight{
-    
-}
-+(NSNumber*)getAge{
-    
-}
-+(Session*)getSession{
-    
+-(Session*)getSession{
+    return session;
 }
 
 

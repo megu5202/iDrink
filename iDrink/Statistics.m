@@ -10,31 +10,31 @@
 
 @implementation Statistics
 
-+(void)calculateBAC{
+-(void)calculateBAC{
     
 }
-+(void)evaluateBAC{
+-(void)evaluateBAC{
     
 }
-+(void)calculateTimeTillSober{
+-(void)calculateTimeTillSober{
     
 }
-+(NSNumber*) getBACNumber{
+-(NSNumber*) getBACNumber{
+    return BACValue;
+}
+-(void)setBACNumber:(NSNumber*)BAC{
     
 }
-+(void)setBACNumber:(NSNumber*)BAC{
+-(NSString*) getBACMessage{
+    return BACMessage;
+}
+-(void)setBACMessage:(NSString*)message{
     
 }
-+(NSString*) getBACMessage{
-    
+-(NSDate*)getTimeTillSober{
+    return timeTillSober;
 }
-+(void)setBACMessage:(NSString*)message{
-    
-}
-+(NSDate*)getTimeTillSober{
-    
-}
-+(void)setTimeTillSober:(NSDate*)time{
+-(void)setTimeTillSober:(NSDate*)time{
     
 }
 
