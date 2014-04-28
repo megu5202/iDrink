@@ -9,7 +9,7 @@
 #import "TabBarController.h"
 
 @interface ProfileViewController : TabBarController{
-    Person *person;
+    //Person *person;
 }
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *gender;
