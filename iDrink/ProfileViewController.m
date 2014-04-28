@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "Person.h"
 
 @interface ProfileViewController ()
 
@@ -24,6 +25,13 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    //hook up background tap to dismiss keyboard function
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget: self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    //set default gender as not selected
+    _gender.selectedSegmentIndex = -1;
     // Do any additional setup after loading the view.
 }
 
@@ -32,27 +40,70 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    //NSLog(@"MADFirstViewController - viewWillDisappear");
+    //BOOL goodData = [(MADTabViewController*)self.tabBarController checkData];
+    //if (!goodData) return; //send me back to this screen, then be done!
+}
 
+- (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage{
+    UIAlertView* alertView = [[UIAlertView alloc]
+                              initWithTitle: alertTitle
+                              message: alertMessage
+                              delegate:self
+                              cancelButtonTitle: @"Ok"
+                              otherButtonTitles: nil];
+    [alertView show];
+}
+
+- (void)sendDataToTabViewController{
+    //NSLog(@"MADFirstViewController - sendDataToTabViewController");
+    //get data from entry fields
+    NSInteger gender = _gender.selectedSegmentIndex;
+    double weight = [_weightField.text doubleValue];
+    double age = [_ageField.text doubleValue];
+    
+    //warn under 21 year olds
+    if (age > 0 && age < 21){
+        [self sendAlert:@"Watch Yourself" : @"The creator of this application is not to be held responsible for any illegal actions you participate in."];
+    }
+    //check that someone isnt making a stupid weight
+    if (weight > 0 && weight < 25){
+        [self sendAlert:@"Error" : @"I think you weigh more than that..."];
+        _weightField.text = @"";
+    }
+    if (weight > 0 && weight > 400){
+        [self sendAlert:@"Error" : @"You can't seriously weigh that much..."];
+        _weightField.text = @"";
+    }
+    
+    //update data:
+    /*
+    [(MADTabViewController*)self.tabBarController updateStats:gender :weight :age];
+    [(MADTabViewController*)self.tabBarController updateBAC];
+    double bac = [(MADTabViewController*)self.tabBarController getBAC];
+    [(MADTabViewController*)self.tabBarController updateDrunkenness: bac];
+     */
+    //[(Person*)self.tabBarController setGender:gender];
+    //[(Person*)self.tabBarController setWeight:weight];
+    //[(Person*)self.tabBarController setAge:age];
+}
 
 /* called when background is tapped */
 - (void)dismissKeyboard{
     NSLog(@"ProfileViewController - dismissKeyboard");
+    //[self sendDataToTabViewController];
     [_weightField resignFirstResponder];
     [_ageField resignFirstResponder];
-    //[self sendDataToTabViewController];
-}
-
-/* called when "DONE" button is pressed in keyboard */
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSLog(@"ProfileViewController - textFieldShouldReturn");
-    [textField resignFirstResponder];
-    //[self sendDataToTabViewController];
-    return NO;
 }
 
 -(IBAction)genderChanged:(UISegmentedControl *)sender{
     NSLog(@"ProfileViewController - genderChanged");
     //Call Person.setGender(kjshdfkj)
+}
+
+-(IBAction)frequencyChanged:(UISegmentedControl *)sender{
+    NSLog(@"ProfileViewController - frequencyChanged");
 }
 
 

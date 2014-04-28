@@ -11,13 +11,14 @@
 @interface ProfileViewController : TabBarController
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *gender;
-@property (nonatomic, retain) IBOutlet UITextField *weightField;
-@property (nonatomic, retain) IBOutlet UITextField *ageField;
+@property (weak, nonatomic) IBOutlet UITextField *weightField;
+@property (weak, nonatomic) IBOutlet UITextField *ageField;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *frequency;
 
 @property (nonatomic, retain) IBOutlet UIButton *settingsButton;
 
 - (IBAction)genderChanged:(UISegmentedControl *)sender;
+- (IBAction)frequencyChanged:(UISegmentedControl *)sender;
 
 
 /*
