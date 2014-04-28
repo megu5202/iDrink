@@ -9,27 +9,24 @@
 #import <Foundation/Foundation.h>
 #import "Session.h"
 
-@interface Person : NSObject
-
-@property (nonatomic, retain) NSNumber *weight;
-@property (nonatomic, retain) NSString *gender;
-@property (nonatomic, retain) NSNumber *matabRate;
-@property (nonatomic, retain) NSNumber *age;
-@property (nonatomic, retain) Session *session;
-//@property (nonatomic, retain) UsageSettings *usageSettings;
-@property (nonatomic) NSInteger alarm;
-
+@interface Person : NSObject{
+    NSNumber *weight;
+    NSString *gender;
+    NSNumber *matabRate;
+    NSNumber *age;
+    Session *session;
+    //UsageSettings *usageSettings;
+    NSInteger alarm;
+}
 //old function
--(id)initWithGender:(NSString *)gender personWeight:(NSNumber *) weight;
 //new refactored functions
-+(void)setGender:(NSString*)newGender;
-+(void)setAge:(NSNumber*)age;
-+(void)setWeight:(NSNumber*)weight;
-+(void)checkStats;
-+(void)newSession;
-+(void)deleteSession;
-+(NSString*)getGender;
-+(NSNumber*)getWeight;
-+(NSNumber*)getAge;
-+(Session*)getSession;
+-(void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage;
+-(void)setGender:(NSString*)newGender;
+-(void)setAge:(NSNumber*)newAge;
+-(void)setWeight:(NSNumber*)newWeight;
+-(void)checkStats;
+-(NSString*)getGender;
+-(NSNumber*)getWeight;
+-(NSNumber*)getAge;
+-(Session*)getSession;
 @end
