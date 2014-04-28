@@ -66,6 +66,7 @@
     NSLog(@"ProfileViewController - sendDataToPerson");
     //get data from entry fields
     NSInteger gender = _gender.selectedSegmentIndex;
+    NSLog(@"gender is %d", gender);
     double weight = [_weightField.text doubleValue];
     double age = [_ageField.text doubleValue];
     
@@ -82,6 +83,7 @@
         [self sendAlert:@"Error" : @"You can't seriously weigh that much..."];
         _weightField.text = @"";
     }
+
     [person setWeight:weight];
     [person setGender:gender];
     [person setAge:age];

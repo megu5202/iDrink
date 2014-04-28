@@ -19,19 +19,16 @@
     //calculate the current BAC
     //[(MADTabViewController*)self.tabBarController updateBAC];
     
-    //get all the data from storage
-    //NSInteger gender = [(Person*)self.tabBarController getGender];
-    //double weight = [(Person*)self.tabBarController getWeight];
-    //double age = [(Person*)self.tabBarController getAge];
-    //double drinks = [(MADTabViewController*)self.tabBarController getDrinkCount];
-    //double hours = [(MADTabViewController*)self.tabBarController getHours];
-    //float bac = [(MADTabViewController*)self.tabBarController getBAC];
-    //NSString *bacMessage = [(MADTabViewController*)self.tabBarController getDrunkenness];
-    
-    //NSInteger gender = [person getGender];
-    //double weight = [person getWeight];
-    //double age = [person getAge];
-    
+    /*
+    NSInteger gender = [(MADTabViewController*)self.tabBarController getGender];
+    double weight = [(MADTabViewController*)self.tabBarController getWeight];
+    double age = [(MADTabViewController*)self.tabBarController getAge];
+    double drinks = [(MADTabViewController*)self.tabBarController getDrinkCount];
+    double hours = [(MADTabViewController*)self.tabBarController getHours];
+    float bac = [(MADTabViewController*)self.tabBarController getBAC];
+    NSString *bacMessage = [(MADTabViewController*)self.tabBarController getDrunkenness];
+    */
+
     //fill in values
     //_genderOut.text = [NSString stringWithFormat:@"%d", gender];
     //_weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
@@ -53,7 +50,6 @@
     _genderOut.text = [NSString stringWithFormat:@"%d", gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
-    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -68,6 +64,7 @@
 - (void)viewDidLoad{
     NSLog(@"BACViewController - viewDidLoad");
     [super viewDidLoad];
+    [self updateLabels];
 }
 
 /* every time this view is loaded */

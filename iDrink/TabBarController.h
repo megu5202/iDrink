@@ -10,6 +10,10 @@
 #import "Session.h"
 #import "Person.h"
 
-@interface TabBarController : UIViewController
+@interface TabBarController : UIViewController{
+    Session* session;
+    Person* person;
+    //NSInteger* bigGender;
+}
 
 @end

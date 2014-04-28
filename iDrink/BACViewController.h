@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 
 @interface BACViewController : TabBarController{
-    Person *person;
+    //Person *person;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *genderOut;
