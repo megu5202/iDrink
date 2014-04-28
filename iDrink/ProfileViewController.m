@@ -30,8 +30,11 @@
                                    initWithTarget: self
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
     //set default gender as not selected
     _gender.selectedSegmentIndex = -1;
+    _frequency.selectedSegmentIndex = -1;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -44,6 +47,7 @@
     //NSLog(@"MADFirstViewController - viewWillDisappear");
     //BOOL goodData = [(MADTabViewController*)self.tabBarController checkData];
     //if (!goodData) return; //send me back to this screen, then be done!
+    //[(Session*)self.tabBarController calculateBAC];
 }
 
 - (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage{
@@ -91,11 +95,13 @@
     [_ageField resignFirstResponder];
 }
 
+/* called when gender is changed */
 -(IBAction)genderChanged:(UISegmentedControl *)sender{
     NSLog(@"ProfileViewController - genderChanged");
     [self sendDataToPerson];
 }
 
+/* called when frequency is changed */
 -(IBAction)frequencyChanged:(UISegmentedControl *)sender{
     NSLog(@"ProfileViewController - frequencyChanged");
     [self sendDataToPerson];
