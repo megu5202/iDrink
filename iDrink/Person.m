@@ -21,18 +21,18 @@
     // *********** if alert title is "error" - make first view appear!
 }
 
--(void)setGender:(NSString*)newGender{
+-(void)setGender:(NSInteger*)newGender{
     gender = newGender;
 }
--(void)setAge:(NSNumber*)newAge{
+-(void)setAge:(double)newAge{
     age = newAge;
 }
--(void)setWeight:(NSNumber*)newWeight{
+-(void)setWeight:(double)newWeight{
     weight = newWeight;
 }
 -(void)checkStats{
-    NSNumber *weightMin = [NSNumber numberWithInt:20];
-    NSNumber *ageMin = [NSNumber numberWithInt:20];
+    double weightMin = 20.0;
+    double ageMin = 21.0;
     if (age >= ageMin && weight > weightMin) {
         //age is good
     }
@@ -40,13 +40,13 @@
         [self sendAlert:@"Error" : @"Please enter a valid weight or age."];
     }
 }
--(NSString*)getGender{
+-(NSInteger*)getGender{
     return gender;
 }
--(NSNumber*)getWeight{
+-(double)getWeight{
     return weight;
 }
--(NSNumber*)getAge{
+-(double)getAge{
     return age;
 }
 -(Session*)getSession{

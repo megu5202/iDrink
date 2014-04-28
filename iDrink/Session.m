@@ -17,4 +17,8 @@
 +(void)removeDrink{
     
 }
+
+-(int)getNumDrinks{
+    return numDrinks;
+}
 @end
