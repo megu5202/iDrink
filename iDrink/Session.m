@@ -38,11 +38,16 @@
     numDrinks = newNumDrinks;
 }
 
--(double)getBAC: (double)weight :(NSInteger)gender :(double)hoursPassed{
+-(double)getBAC{
+    return [stats getBACNumber];
+}
+
+-(double)calcBAC: (double)weight :(NSInteger)gender :(double)hoursPassed{
     double BAC = 0.0;
     BAC = [stats calculateBAC:weight :gender :numDrinks :hoursPassed];
     return BAC;
 }
+
 -(NSString*)getBACMessage{
     return [stats getBACMessage];
 }

@@ -6,9 +6,12 @@
 //
 //
 
+#import "AppDelegate.h"
 #import "TabBarController.h"
 
-@interface ProfileViewController : TabBarController
+@interface ProfileViewController : TabBarController{
+    AppDelegate *appDelegate;
+}
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *gender;
 @property (weak, nonatomic) IBOutlet UITextField *weightField;

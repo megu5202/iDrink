@@ -23,8 +23,10 @@
 -(int)getNumDrinks;
 -(void)setNumDrinks:(int)newNumDrinks;
 
--(double)getBAC: (double)weight :(NSInteger)gender :(double)hoursPassed;
+-(double)getBAC;
+-(double)calcBAC: (double)weight :(NSInteger)gender :(double)hoursPassed;
 -(NSString*)getBACMessage;
+
 
 
 @end

@@ -13,6 +13,7 @@
 		3B154704190DEDBC009323C5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FF190DEDBC009323C5 /* Statistics.m */; };
 		3B154707190DEE2C009323C5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B154706190DEE2C009323C5 /* Person.m */; };
 		3B5AAA50190EB95B0067B033 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5AAA4F190EB95B0067B033 /* CoreData.framework */; };
+		A19AA841190F07FF00E39788 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19AA840190F07FF00E39788 /* SettingsViewController.m */; };
 		A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
 		A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */; };
 		A1A22AD5190DE2DD0019BD5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD4190DE2DD0019BD5D /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 		3B154705190DEE2C009323C5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		3B154706190DEE2C009323C5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		3B5AAA4F190EB95B0067B033 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A19AA83F190F07FF00E39788 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		A19AA840190F07FF00E39788 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		A1A22ACD190DE2DD0019BD5D /* iDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A22AD0190DE2DD0019BD5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				A1A22B09190DE33E0019BD5D /* TabBarController.m */,
 				A1A22B0F190DE53F0019BD5D /* ProfileViewController.h */,
 				A1A22B10190DE53F0019BD5D /* ProfileViewController.m */,
+				A19AA83F190F07FF00E39788 /* SettingsViewController.h */,
+				A19AA840190F07FF00E39788 /* SettingsViewController.m */,
 				A1A22B0D190DE53F0019BD5D /* BACViewController.h */,
 				A1A22B0E190DE53F0019BD5D /* BACViewController.m */,
 				A1A22B0B190DE53F0019BD5D /* AddDrinkViewController.h */,
@@ -324,6 +329,7 @@
 				3B154700190DEDBC009323C5 /* Drink.m in Sources */,
 				A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */,
 				A1A22ADD190DE2DD0019BD5D /* main.m in Sources */,
+				A19AA841190F07FF00E39788 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

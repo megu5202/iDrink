@@ -27,7 +27,8 @@
     
     //test bac calc
     [session addDrink];
-    double bac = [session getBAC:weight :gender :3];
+    [session calcBAC:weight :gender :3];
+    double bac = [session getBAC];
     int drinksRecorded = [session getNumDrinks];
     NSString *BACMessage = [session getBACMessage];
     
