@@ -26,4 +26,5 @@
 -(NSInteger)getGender;
 -(double)getWeight;
 -(double)getAge;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @end

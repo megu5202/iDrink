@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Session.h"
+#import "Person.h"
 
-@interface TabBarController : UIViewController{
-    Session *session;
-}
+@interface TabBarController : UIViewController
 
 @end
