@@ -49,9 +49,4 @@
 -(double)getAge{
     return age;
 }
--(Session*)getSession{
-    return session;
-}
-
-
 @end

@@ -7,17 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Person.h"
 
 @interface Statistics : NSObject{
     double BACValue;
     NSString *BACMessage;
     NSDate *timeTillSober;
-    Person *person;
 }
 
--(void)calculateBAC;
--(void)setPerson:(Person*)newPerson;
+-(void)calculateBAC: (double)weight: (NSInteger*)gender: (double)numDrinks: (double)hoursPassed;
 -(void)evaluateBAC;
 -(void)calculateTimeTillSober;
 -(double) getBACNumber;
