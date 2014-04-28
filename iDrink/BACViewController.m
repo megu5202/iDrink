@@ -17,18 +17,6 @@
 - (void)updateLabels{
     NSLog(@"BACViewController - updateLabels");
     
-    //fill in values
-    //_genderOut.text = [NSString stringWithFormat:@"%d", gender];
-    //_weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
-    //_ageOut.text = [NSString stringWithFormat:@"%.3f", age];
-    //_drinkCountOut.text = [NSString stringWithFormat:@"%.3f", drinks];
-    //_hoursOut.text = [NSString stringWithFormat:@"%.3f", hours];
-    
-    //if (bac > 1.0) _bacNumber.text = [NSString stringWithFormat:@"%.3f", 1.000];
-    //else if (bac < 0.0) _bacNumber.text = [NSString stringWithFormat:@"%.3f", 0.000];
-    //else _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
-    
-    //_baessage.text = bacMessage;
     AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
     person = appDelegate.getPerson;
     session = appDelegate.getSession;
