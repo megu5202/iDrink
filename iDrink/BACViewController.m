@@ -19,10 +19,6 @@
     //calculate the current BAC
     //[(MADTabViewController*)self.tabBarController updateBAC];
     
-    //get all the data from storage
-    NSInteger gender = [person getGender];
-    double weight = [person getWeight];
-    double age = [person getAge];
     /*
     NSInteger gender = [(MADTabViewController*)self.tabBarController getGender];
     double weight = [(MADTabViewController*)self.tabBarController getWeight];
@@ -32,20 +28,28 @@
     float bac = [(MADTabViewController*)self.tabBarController getBAC];
     NSString *bacMessage = [(MADTabViewController*)self.tabBarController getDrunkenness];
     */
+
     //fill in values
+    //_genderOut.text = [NSString stringWithFormat:@"%d", gender];
+    //_weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
+    //_ageOut.text = [NSString stringWithFormat:@"%.3f", age];
+    //_drinkCountOut.text = [NSString stringWithFormat:@"%.3f", drinks];
+    //_hoursOut.text = [NSString stringWithFormat:@"%.3f", hours];
+    
+    //if (bac > 1.0) _bacNumber.text = [NSString stringWithFormat:@"%.3f", 1.000];
+    //else if (bac < 0.0) _bacNumber.text = [NSString stringWithFormat:@"%.3f", 0.000];
+    //else _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
+    
+    //_baessage.text = bacMessage;
+    AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
+    person = appDelegate.getPerson;
+    NSInteger gender = [person getGender];
+    double weight = [person getWeight];
+    double age = [person getAge];
+    
     _genderOut.text = [NSString stringWithFormat:@"%d", gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
-    /*
-    _drinkCountOut.text = [NSString stringWithFormat:@"%.3f", drinks];
-    _hoursOut.text = [NSString stringWithFormat:@"%.3f", hours];
-    
-    if (bac > 1.0) _bacNumber.text = [NSString stringWithFormat:@"%.3f", 1.000];
-    else if (bac < 0.0) _bacNumber.text = [NSString stringWithFormat:@"%.3f", 0.000];
-    else _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
-    
-    _bacMessage.text = bacMessage;
-     */
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{

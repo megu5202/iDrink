@@ -9,6 +9,7 @@
 #import "Person.h"
 
 @implementation Person
+@synthesize managedObjectContext;
 
 - (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage{
     UIAlertView* alertView = [[UIAlertView alloc]

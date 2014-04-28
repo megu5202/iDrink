@@ -13,7 +13,7 @@
 @interface TabBarController : UIViewController{
     Session* session;
     Person* person;
-    NSInteger* bigGender;
+    //NSInteger* bigGender;
 }
 
 @end

@@ -11,7 +11,7 @@
 @implementation Statistics
 
 
--(void)calculateBAC: (double)weight: (NSInteger*)gender: (double)numDrinks: (double)hoursPassed{
+-(void)calculateBAC: (double)weight :(NSInteger*)gender :(double)numDrinks :(double)hoursPassed{
     NSLog(@"updateBAC");
     double bac = 0;
     double bodyWaterConstant = 0;

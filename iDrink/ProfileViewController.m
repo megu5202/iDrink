@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "Person.h"
+#import "AppDelegate.h"
 
 @interface ProfileViewController ()
 
@@ -32,9 +33,10 @@
     [self.view addGestureRecognizer:tap];
     
     //set default gender as not selected
-    _gender.selectedSegmentIndex = -1;
-    _frequency.selectedSegmentIndex = -1;
-    
+    _gender.selectedSegmentIndex = 0;
+    _frequency.selectedSegmentIndex = 0;
+    AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
+    person = appDelegate.getPerson;
     // Do any additional setup after loading the view.
 }
 
@@ -77,25 +79,22 @@
         [self sendAlert:@"Error" : @"I think you weigh more than that..."];
         _weightField.text = @"";
     }
-    if (weight > 0 && weight > 400){
+    if (weight > 0 && weight > 500){
         [self sendAlert:@"Error" : @"You can't seriously weigh that much..."];
         _weightField.text = @"";
     }
-    
-    //update data:
-    bigGender = &gender;
-    [person setGender:gender];
+
     [person setWeight:weight];
+    [person setGender:gender];
     [person setAge:age];
-    //[(Person*)self.tabBarController setGender:gender];
-    //[(Person*)self.tabBarController setWeight:weight];
-    //[(Person*)self.tabBarController setAge:age];
+    AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
+    [appDelegate setPerson:person];
 }
 
 /* called when background is tapped */
 - (void)dismissKeyboard{
     NSLog(@"ProfileViewController - dismissKeyboard");
-    [self sendDataToPerson];
+    //[self sendDataToPerson];
     [_weightField resignFirstResponder];
     [_ageField resignFirstResponder];
 }
@@ -111,7 +110,6 @@
     NSLog(@"ProfileViewController - frequencyChanged");
     [self sendDataToPerson];
 }
-
 
 
 /*

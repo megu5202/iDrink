@@ -14,7 +14,7 @@
     NSDate *timeTillSober;
 }
 
--(void)calculateBAC: (double)weight: (NSInteger*)gender: (double)numDrinks: (double)hoursPassed;
+-(void)calculateBAC: (double)weight :(NSInteger*)gender :(double)numDrinks :(double)hoursPassed;
 -(void)evaluateBAC;
 -(void)calculateTimeTillSober;
 -(double) getBACNumber;
