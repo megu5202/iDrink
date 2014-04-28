@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Statistics.h"
+#import "Drink.h"
+#import "Person.h"
 
 @interface Session : NSObject{
     NSMutableArray *drinksDrank;
     Statistics *stats;
+    Person *person;
+    Drink *drink;
     int numDrinks;
-
 }
 
 +(void)addDrink;

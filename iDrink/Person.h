@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Session.h"
 
 @interface Person : NSObject{
     double weight;
     NSInteger gender;
     double matabRate;
     double age;
-    Session *session;
     //UsageSettings *usageSettings;
     NSInteger alarm;
 }
@@ -28,5 +26,4 @@
 -(NSInteger)getGender;
 -(double)getWeight;
 -(double)getAge;
--(Session*)getSession;
 @end
