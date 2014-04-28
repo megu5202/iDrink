@@ -13,6 +13,11 @@
 		3B154704190DEDBC009323C5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FF190DEDBC009323C5 /* Statistics.m */; };
 		3B154707190DEE2C009323C5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B154706190DEE2C009323C5 /* Person.m */; };
 		3B5AAA50190EB95B0067B033 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5AAA4F190EB95B0067B033 /* CoreData.framework */; };
+		A11ABD84190F114D00577BF5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ABD83190F114D00577BF5 /* MapKit.framework */; };
+		A11ABD86190F136900577BF5 /* drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = A11ABD85190F136900577BF5 /* drinks.plist */; };
+		A11ABD8C190F182900577BF5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11ABD8B190F182900577BF5 /* MapViewController.m */; };
+		A11ABD8F190F184800577BF5 /* AddDrinkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11ABD8E190F184800577BF5 /* AddDrinkListViewController.m */; };
+		A11ABD92190F186C00577BF5 /* DrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11ABD91190F186C00577BF5 /* DrinkViewController.m */; };
 		A19AA841190F07FF00E39788 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19AA840190F07FF00E39788 /* SettingsViewController.m */; };
 		A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
 		A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */; };
@@ -21,8 +26,6 @@
 		A1A22ADD190DE2DD0019BD5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22ADC190DE2DD0019BD5D /* main.m */; };
 		A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */; };
 		A1A22AE4190DE2DD0019BD5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A22AE2190DE2DD0019BD5D /* Main.storyboard */; };
-		A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */; };
-		A1A22AEA190DE2DD0019BD5D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */; };
 		A1A22AEC190DE2DD0019BD5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A22AEB190DE2DD0019BD5D /* Images.xcassets */; };
 		A1A22AF3190DE2DD0019BD5D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AF2190DE2DD0019BD5D /* XCTest.framework */; };
 		A1A22AF4190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
@@ -57,6 +60,14 @@
 		3B154705190DEE2C009323C5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		3B154706190DEE2C009323C5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		3B5AAA4F190EB95B0067B033 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A11ABD83190F114D00577BF5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A11ABD85190F136900577BF5 /* drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drinks.plist; sourceTree = "<group>"; };
+		A11ABD8A190F182900577BF5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A11ABD8B190F182900577BF5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		A11ABD8D190F184800577BF5 /* AddDrinkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDrinkListViewController.h; sourceTree = "<group>"; };
+		A11ABD8E190F184800577BF5 /* AddDrinkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDrinkListViewController.m; sourceTree = "<group>"; };
+		A11ABD90190F186C00577BF5 /* DrinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkViewController.h; sourceTree = "<group>"; };
+		A11ABD91190F186C00577BF5 /* DrinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkViewController.m; sourceTree = "<group>"; };
 		A19AA83F190F07FF00E39788 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		A19AA840190F07FF00E39788 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		A1A22ACD190DE2DD0019BD5D /* iDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,10 +81,6 @@
 		A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A1A22AE3190DE2DD0019BD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A1A22AE5190DE2DD0019BD5D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A1A22AE8190DE2DD0019BD5D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A1A22AEB190DE2DD0019BD5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A1A22AF1190DE2DD0019BD5D /* iDrinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDrinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A22AF2190DE2DD0019BD5D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -95,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11ABD84190F114D00577BF5 /* MapKit.framework in Frameworks */,
 				A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */,
 				A1A22AD5190DE2DD0019BD5D /* UIKit.framework in Frameworks */,
 				A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */,
@@ -128,10 +136,12 @@
 				A1A22B0E190DE53F0019BD5D /* BACViewController.m */,
 				A1A22B0B190DE53F0019BD5D /* AddDrinkViewController.h */,
 				A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */,
-				A1A22AE5190DE2DD0019BD5D /* FirstViewController.h */,
-				A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */,
-				A1A22AE8190DE2DD0019BD5D /* SecondViewController.h */,
-				A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */,
+				A11ABD8D190F184800577BF5 /* AddDrinkListViewController.h */,
+				A11ABD8E190F184800577BF5 /* AddDrinkListViewController.m */,
+				A11ABD90190F186C00577BF5 /* DrinkViewController.h */,
+				A11ABD91190F186C00577BF5 /* DrinkViewController.m */,
+				A11ABD8A190F182900577BF5 /* MapViewController.h */,
+				A11ABD8B190F182900577BF5 /* MapViewController.m */,
 			);
 			name = "view contollers";
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		A1A22ACF190DE2DD0019BD5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A11ABD83190F114D00577BF5 /* MapKit.framework */,
 				3B5AAA4F190EB95B0067B033 /* CoreData.framework */,
 				A1A22AD0190DE2DD0019BD5D /* Foundation.framework */,
 				A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */,
@@ -170,6 +181,9 @@
 		A1A22AD6190DE2DD0019BD5D /* iDrink */ = {
 			isa = PBXGroup;
 			children = (
+				A1A22AE2190DE2DD0019BD5D /* Main.storyboard */,
+				A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */,
+				A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */,
 				3B154708190DEE43009323C5 /* view contollers */,
 				3B154705190DEE2C009323C5 /* Person.h */,
 				3B154706190DEE2C009323C5 /* Person.m */,
@@ -181,9 +195,6 @@
 				3B1546FD190DEDBC009323C5 /* Session.m */,
 				3B1546FE190DEDBC009323C5 /* Statistics.h */,
 				3B1546FF190DEDBC009323C5 /* Statistics.m */,
-				A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */,
-				A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */,
-				A1A22AE2190DE2DD0019BD5D /* Main.storyboard */,
 				A1A22AEB190DE2DD0019BD5D /* Images.xcassets */,
 				A1A22AD7190DE2DD0019BD5D /* Supporting Files */,
 			);
@@ -193,6 +204,7 @@
 		A1A22AD7190DE2DD0019BD5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A11ABD85190F136900577BF5 /* drinks.plist */,
 				A1A22AD8190DE2DD0019BD5D /* iDrink-Info.plist */,
 				A1A22AD9190DE2DD0019BD5D /* InfoPlist.strings */,
 				A1A22ADC190DE2DD0019BD5D /* main.m */,
@@ -296,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A22AEC190DE2DD0019BD5D /* Images.xcassets in Resources */,
+				A11ABD86190F136900577BF5 /* drinks.plist in Resources */,
 				A1A22ADB190DE2DD0019BD5D /* InfoPlist.strings in Resources */,
 				A1A22AE4190DE2DD0019BD5D /* Main.storyboard in Resources */,
 			);
@@ -318,18 +331,19 @@
 			files = (
 				3B154704190DEDBC009323C5 /* Statistics.m in Sources */,
 				3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */,
-				A1A22AEA190DE2DD0019BD5D /* SecondViewController.m in Sources */,
 				A1A22B11190DE53F0019BD5D /* AddDrinkViewController.m in Sources */,
 				A1A22B13190DE53F0019BD5D /* ProfileViewController.m in Sources */,
 				A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */,
+				A11ABD8F190F184800577BF5 /* AddDrinkListViewController.m in Sources */,
 				A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */,
 				A1A22B0A190DE33E0019BD5D /* TabBarController.m in Sources */,
 				3B154703190DEDBC009323C5 /* Session.m in Sources */,
 				3B154707190DEE2C009323C5 /* Person.m in Sources */,
 				3B154700190DEDBC009323C5 /* Drink.m in Sources */,
-				A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */,
+				A11ABD92190F186C00577BF5 /* DrinkViewController.m in Sources */,
 				A1A22ADD190DE2DD0019BD5D /* main.m in Sources */,
 				A19AA841190F07FF00E39788 /* SettingsViewController.m in Sources */,
+				A11ABD8C190F182900577BF5 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,7 +40,7 @@
     NSLog(@"drinks recorded is %d", drinksRecorded);
     _hoursOut.text = [NSString stringWithFormat:@"%.3d", 3];
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
-    [appDelegate setSesion:session];
+    [appDelegate setSession:session];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{

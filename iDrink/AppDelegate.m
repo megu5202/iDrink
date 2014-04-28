@@ -13,8 +13,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;*/
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     p = [[Person alloc]init];
     [p setGender:0];
     [p setWeight:150];
@@ -24,6 +23,28 @@
     [session setNumDrinks:0];
     
     return YES;
+}
+
+-(Person*)getPerson{
+    return p;
+}
+
+-(void)setPerson:(Person*)person{
+    double personWeight = [person getWeight];
+    double personAge = [person getAge];
+    NSInteger personGender = [person getGender];
+    [p setWeight:personWeight];
+    [p setAge:personAge];
+    [p setGender:personGender];
+}
+
+-(Session*)getSession{
+    return session;
+}
+
+-(void)setSession:(Session*)newSession{
+    int newSessionNumDrinks = [newSession getNumDrinks];
+    [session setNumDrinks:newSessionNumDrinks];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -52,26 +73,6 @@
 {
     // Saves changes in the application's managed object context before the application terminates.
     //[self saveContext];
-}
-
--(Person*)getPerson{
-    return p;
-}
--(void)setPerson:(Person*)person{
-    double personWeight = [person getWeight];
-    double personAge = [person getAge];
-    NSInteger personGender = [person getGender];
-    [p setWeight:personWeight];
-    [p setAge:personAge];
-    [p setGender:personGender];
-}
-
--(Session*)getSession{
-    return session;
-}
--(void)setSesion:(Session*)newSession{
-    int newSessionNumDrinks = [newSession getNumDrinks];
-    [session setNumDrinks:newSessionNumDrinks];
 }
 
 @end

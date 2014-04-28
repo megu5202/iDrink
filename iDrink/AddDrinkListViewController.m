@@ -1,0 +1,93 @@
+//
+//  AddDrinkListViewController.m
+//  iDrink
+//
+//  Created by Melissa on 4/28/14.
+//  Copyright (c) 2014 Melissa. All rights reserved.
+//
+
+#import "AddDrinkListViewController.h"
+#import "DrinkViewController.h"
+
+@interface AddDrinkListViewController (){
+    NSMutableArray *drinkData;
+}
+
+@end
+
+@implementation AddDrinkListViewController
+
+- (id)initWithStyle:(UITableViewStyle)style{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    drinkData = _drinkList;
+    // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"AddDrinkListViewController - viewWillAppear");
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    // Return the number of rows in the section.
+    return [drinkData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"AddDrinkListViewController - tableView");
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [drinkData objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"MADDrinkListViewController - prepareForSegue");
+    if ([segue.identifier isEqualToString: @"drinkSegue"]) {
+        DrinkViewController *drinkViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSArray *rowData = drinkData;
+        //drinkViewController.title = [rowData objectAtIndex:indexPath.row];
+        //drinkViewController.name = [rowData objectAtIndex:indexPath.row];
+        //drinkViewController.drinkType = _currentDrinkType;
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle: _currentDrinkType
+                                                                       style: UIBarButtonItemStyleBordered
+                                                                      target: nil
+                                                                      action: nil];
+        self.navigationItem.backBarButtonItem = backButton;
+    }
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

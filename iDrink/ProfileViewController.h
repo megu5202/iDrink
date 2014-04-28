@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TabBarController.h"
 
-@interface ProfileViewController : TabBarController{
+@interface ProfileViewController:TabBarController{
     AppDelegate *appDelegate;
 }
 
