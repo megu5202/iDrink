@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Session.h"
 
-@interface TabBarController : UIViewController
+@interface TabBarController : UIViewController{
+    Session* session;
+}
 
 @end
