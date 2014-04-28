@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
+		A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */; };
+		A1A22AD5190DE2DD0019BD5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD4190DE2DD0019BD5D /* UIKit.framework */; };
+		A1A22ADB190DE2DD0019BD5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1A22AD9190DE2DD0019BD5D /* InfoPlist.strings */; };
+		A1A22ADD190DE2DD0019BD5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22ADC190DE2DD0019BD5D /* main.m */; };
+		A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */; };
+		A1A22AE4190DE2DD0019BD5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A22AE2190DE2DD0019BD5D /* Main.storyboard */; };
+		A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */; };
+		A1A22AEA190DE2DD0019BD5D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */; };
+		A1A22AEC190DE2DD0019BD5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A22AEB190DE2DD0019BD5D /* Images.xcassets */; };
+		A1A22AF3190DE2DD0019BD5D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AF2190DE2DD0019BD5D /* XCTest.framework */; };
+		A1A22AF4190DE2DD0019BD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD0190DE2DD0019BD5D /* Foundation.framework */; };
+		A1A22AF5190DE2DD0019BD5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD4190DE2DD0019BD5D /* UIKit.framework */; };
+		A1A22AFD190DE2DD0019BD5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1A22AFB190DE2DD0019BD5D /* InfoPlist.strings */; };
+		A1A22AFF190DE2DD0019BD5D /* iDrinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22AFE190DE2DD0019BD5D /* iDrinkTests.m */; };
+		A1A22B0A190DE33E0019BD5D /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B09190DE33E0019BD5D /* TabBarController.m */; };
+		A1A22B11190DE53F0019BD5D /* AddDrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */; };
+		A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B0E190DE53F0019BD5D /* BACViewController.m */; };
+		A1A22B13190DE53F0019BD5D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B10190DE53F0019BD5D /* ProfileViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1A22AF6190DE2DD0019BD5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1A22AC5190DE2DD0019BD5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1A22ACC190DE2DD0019BD5D;
+			remoteInfo = iDrink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1A22ACD190DE2DD0019BD5D /* iDrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A22AD0190DE2DD0019BD5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1A22AD4190DE2DD0019BD5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1A22AD8190DE2DD0019BD5D /* iDrink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDrink-Info.plist"; sourceTree = "<group>"; };
+		A1A22ADA190DE2DD0019BD5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1A22ADC190DE2DD0019BD5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1A22ADE190DE2DD0019BD5D /* iDrink-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDrink-Prefix.pch"; sourceTree = "<group>"; };
+		A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1A22AE3190DE2DD0019BD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1A22AE5190DE2DD0019BD5D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		A1A22AE8190DE2DD0019BD5D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A1A22AEB190DE2DD0019BD5D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1A22AF1190DE2DD0019BD5D /* iDrinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDrinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A22AF2190DE2DD0019BD5D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A1A22AFA190DE2DD0019BD5D /* iDrinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDrinkTests-Info.plist"; sourceTree = "<group>"; };
+		A1A22AFC190DE2DD0019BD5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1A22AFE190DE2DD0019BD5D /* iDrinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDrinkTests.m; sourceTree = "<group>"; };
+		A1A22B08190DE33E0019BD5D /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		A1A22B09190DE33E0019BD5D /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		A1A22B0B190DE53F0019BD5D /* AddDrinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDrinkViewController.h; sourceTree = "<group>"; };
+		A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDrinkViewController.m; sourceTree = "<group>"; };
+		A1A22B0D190DE53F0019BD5D /* BACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACViewController.h; sourceTree = "<group>"; };
+		A1A22B0E190DE53F0019BD5D /* BACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACViewController.m; sourceTree = "<group>"; };
+		A1A22B0F190DE53F0019BD5D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A1A22B10190DE53F0019BD5D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1A22ACA190DE2DD0019BD5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A22AD3190DE2DD0019BD5D /* CoreGraphics.framework in Frameworks */,
+				A1A22AD5190DE2DD0019BD5D /* UIKit.framework in Frameworks */,
+				A1A22AD1190DE2DD0019BD5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A22AEE190DE2DD0019BD5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A22AF3190DE2DD0019BD5D /* XCTest.framework in Frameworks */,
+				A1A22AF5190DE2DD0019BD5D /* UIKit.framework in Frameworks */,
+				A1A22AF4190DE2DD0019BD5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1A22AC4190DE2DD0019BD5D = {
+			isa = PBXGroup;
+			children = (
+				A1A22AD6190DE2DD0019BD5D /* iDrink */,
+				A1A22AF8190DE2DD0019BD5D /* iDrinkTests */,
+				A1A22ACF190DE2DD0019BD5D /* Frameworks */,
+				A1A22ACE190DE2DD0019BD5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1A22ACE190DE2DD0019BD5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22ACD190DE2DD0019BD5D /* iDrink.app */,
+				A1A22AF1190DE2DD0019BD5D /* iDrinkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1A22ACF190DE2DD0019BD5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22AD0190DE2DD0019BD5D /* Foundation.framework */,
+				A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */,
+				A1A22AD4190DE2DD0019BD5D /* UIKit.framework */,
+				A1A22AF2190DE2DD0019BD5D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1A22AD6190DE2DD0019BD5D /* iDrink */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */,
+				A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */,
+				A1A22AE2190DE2DD0019BD5D /* Main.storyboard */,
+				A1A22B08190DE33E0019BD5D /* TabBarController.h */,
+				A1A22B09190DE33E0019BD5D /* TabBarController.m */,
+				A1A22B0F190DE53F0019BD5D /* ProfileViewController.h */,
+				A1A22B10190DE53F0019BD5D /* ProfileViewController.m */,
+				A1A22B0D190DE53F0019BD5D /* BACViewController.h */,
+				A1A22B0E190DE53F0019BD5D /* BACViewController.m */,
+				A1A22B0B190DE53F0019BD5D /* AddDrinkViewController.h */,
+				A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */,
+				A1A22AE5190DE2DD0019BD5D /* FirstViewController.h */,
+				A1A22AE6190DE2DD0019BD5D /* FirstViewController.m */,
+				A1A22AE8190DE2DD0019BD5D /* SecondViewController.h */,
+				A1A22AE9190DE2DD0019BD5D /* SecondViewController.m */,
+				A1A22AEB190DE2DD0019BD5D /* Images.xcassets */,
+				A1A22AD7190DE2DD0019BD5D /* Supporting Files */,
+			);
+			path = iDrink;
+			sourceTree = "<group>";
+		};
+		A1A22AD7190DE2DD0019BD5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22AD8190DE2DD0019BD5D /* iDrink-Info.plist */,
+				A1A22AD9190DE2DD0019BD5D /* InfoPlist.strings */,
+				A1A22ADC190DE2DD0019BD5D /* main.m */,
+				A1A22ADE190DE2DD0019BD5D /* iDrink-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1A22AF8190DE2DD0019BD5D /* iDrinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22AFE190DE2DD0019BD5D /* iDrinkTests.m */,
+				A1A22AF9190DE2DD0019BD5D /* Supporting Files */,
+			);
+			path = iDrinkTests;
+			sourceTree = "<group>";
+		};
+		A1A22AF9190DE2DD0019BD5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22AFA190DE2DD0019BD5D /* iDrinkTests-Info.plist */,
+				A1A22AFB190DE2DD0019BD5D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1A22ACC190DE2DD0019BD5D /* iDrink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A22B02190DE2DD0019BD5D /* Build configuration list for PBXNativeTarget "iDrink" */;
+			buildPhases = (
+				A1A22AC9190DE2DD0019BD5D /* Sources */,
+				A1A22ACA190DE2DD0019BD5D /* Frameworks */,
+				A1A22ACB190DE2DD0019BD5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDrink;
+			productName = iDrink;
+			productReference = A1A22ACD190DE2DD0019BD5D /* iDrink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1A22AF0190DE2DD0019BD5D /* iDrinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A22B05190DE2DD0019BD5D /* Build configuration list for PBXNativeTarget "iDrinkTests" */;
+			buildPhases = (
+				A1A22AED190DE2DD0019BD5D /* Sources */,
+				A1A22AEE190DE2DD0019BD5D /* Frameworks */,
+				A1A22AEF190DE2DD0019BD5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1A22AF7190DE2DD0019BD5D /* PBXTargetDependency */,
+			);
+			name = iDrinkTests;
+			productName = iDrinkTests;
+			productReference = A1A22AF1190DE2DD0019BD5D /* iDrinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1A22AC5190DE2DD0019BD5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Melissa;
+				TargetAttributes = {
+					A1A22AF0190DE2DD0019BD5D = {
+						TestTargetID = A1A22ACC190DE2DD0019BD5D;
+					};
+				};
+			};
+			buildConfigurationList = A1A22AC8190DE2DD0019BD5D /* Build configuration list for PBXProject "iDrink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1A22AC4190DE2DD0019BD5D;
+			productRefGroup = A1A22ACE190DE2DD0019BD5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1A22ACC190DE2DD0019BD5D /* iDrink */,
+				A1A22AF0190DE2DD0019BD5D /* iDrinkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1A22ACB190DE2DD0019BD5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A22AEC190DE2DD0019BD5D /* Images.xcassets in Resources */,
+				A1A22ADB190DE2DD0019BD5D /* InfoPlist.strings in Resources */,
+				A1A22AE4190DE2DD0019BD5D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A22AEF190DE2DD0019BD5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A22AFD190DE2DD0019BD5D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1A22AC9190DE2DD0019BD5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A22AEA190DE2DD0019BD5D /* SecondViewController.m in Sources */,
+				A1A22B11190DE53F0019BD5D /* AddDrinkViewController.m in Sources */,
+				A1A22B13190DE53F0019BD5D /* ProfileViewController.m in Sources */,
+				A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */,
+				A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */,
+				A1A22B0A190DE33E0019BD5D /* TabBarController.m in Sources */,
+				A1A22AE7190DE2DD0019BD5D /* FirstViewController.m in Sources */,
+				A1A22ADD190DE2DD0019BD5D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A22AED190DE2DD0019BD5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A22AFF190DE2DD0019BD5D /* iDrinkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1A22AF7190DE2DD0019BD5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1A22ACC190DE2DD0019BD5D /* iDrink */;
+			targetProxy = A1A22AF6190DE2DD0019BD5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1A22AD9190DE2DD0019BD5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A22ADA190DE2DD0019BD5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A1A22AE2190DE2DD0019BD5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A22AE3190DE2DD0019BD5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1A22AFB190DE2DD0019BD5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A22AFC190DE2DD0019BD5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1A22B00190DE2DD0019BD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1A22B01190DE2DD0019BD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1A22B03190DE2DD0019BD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
+				INFOPLIST_FILE = "iDrink/iDrink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1A22B04190DE2DD0019BD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
+				INFOPLIST_FILE = "iDrink/iDrink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A1A22B06190DE2DD0019BD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iDrink.app/iDrink";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iDrinkTests/iDrinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A1A22B07190DE2DD0019BD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iDrink.app/iDrink";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDrink/iDrink-Prefix.pch";
+				INFOPLIST_FILE = "iDrinkTests/iDrinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1A22AC8190DE2DD0019BD5D /* Build configuration list for PBXProject "iDrink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A22B00190DE2DD0019BD5D /* Debug */,
+				A1A22B01190DE2DD0019BD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A22B02190DE2DD0019BD5D /* Build configuration list for PBXNativeTarget "iDrink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A22B03190DE2DD0019BD5D /* Debug */,
+				A1A22B04190DE2DD0019BD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A1A22B05190DE2DD0019BD5D /* Build configuration list for PBXNativeTarget "iDrinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A22B06190DE2DD0019BD5D /* Debug */,
+				A1A22B07190DE2DD0019BD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1A22AC5190DE2DD0019BD5D /* Project object */;
+}
