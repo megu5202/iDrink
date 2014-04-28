@@ -15,7 +15,7 @@
 }
 
 -(void)calculateBAC{
-    NSLog(@"updateBAC");
+    /*NSLog(@"updateBAC");
     int bac = 0;
     double genderConstant = -1;
     NSString *gender = person.getGender;
@@ -33,7 +33,7 @@
         bodyWaterConstant = 0.49;
     }
     
-    bac = (.806 * drinksDrank * 1.2)/(bodyWaterConstant * )
+    bac = (.806 * drinksDrank * 1.2)/(bodyWaterConstant * )*/
 }
 -(void)evaluateBAC{
     
@@ -41,10 +41,10 @@
 -(void)calculateTimeTillSober{
     
 }
--(NSNumber*) getBACNumber{
+-(double) getBACNumber{
     return BACValue;
 }
--(void)setBACNumber:(NSNumber*)newBAC{
+-(void)setBACNumber:(double)newBAC{
     BACValue = newBAC;
 }
 -(NSString*) getBACMessage{

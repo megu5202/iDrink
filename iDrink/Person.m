@@ -21,7 +21,7 @@
     // *********** if alert title is "error" - make first view appear!
 }
 
--(void)setGender:(NSInteger*)newGender{
+-(void)setGender:(NSInteger)newGender{
     gender = newGender;
 }
 -(void)setAge:(double)newAge{
@@ -40,7 +40,7 @@
         [self sendAlert:@"Error" : @"Please enter a valid weight or age."];
     }
 }
--(NSInteger*)getGender{
+-(NSInteger)getGender{
     return gender;
 }
 -(double)getWeight{
