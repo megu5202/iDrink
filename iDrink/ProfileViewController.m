@@ -82,9 +82,9 @@
     }
     
     //update data:
-    [(Person*)self.tabBarController setGender:gender];
-    [(Person*)self.tabBarController setWeight:weight];
-    [(Person*)self.tabBarController setAge:age];
+    //[(Person*)self.tabBarController setGender:gender];
+    //[(Person*)self.tabBarController setWeight:weight];
+    //[(Person*)self.tabBarController setAge:age];
 }
 
 /* called when background is tapped */
