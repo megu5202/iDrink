@@ -16,19 +16,7 @@
 
 - (void)updateLabels{
     NSLog(@"BACViewController - updateLabels");
-    //calculate the current BAC
-    //[(MADTabViewController*)self.tabBarController updateBAC];
     
-    /*
-    NSInteger gender = [(MADTabViewController*)self.tabBarController getGender];
-    double weight = [(MADTabViewController*)self.tabBarController getWeight];
-    double age = [(MADTabViewController*)self.tabBarController getAge];
-    double drinks = [(MADTabViewController*)self.tabBarController getDrinkCount];
-    double hours = [(MADTabViewController*)self.tabBarController getHours];
-    float bac = [(MADTabViewController*)self.tabBarController getBAC];
-    NSString *bacMessage = [(MADTabViewController*)self.tabBarController getDrunkenness];
-    */
-
     //fill in values
     //_genderOut.text = [NSString stringWithFormat:@"%d", gender];
     //_weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
@@ -51,9 +39,9 @@
     
     //test bac calc
     [session addDrink];
-    [session addDrink];
     double bac = [session getBAC:weight :gender :3];
     int drinksRecorded = [session getNumDrinks];
+    NSString *BACMessage = [session getBACMessage];
     
     _genderOut.text = [NSString stringWithFormat:@"%d", gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
@@ -62,6 +50,7 @@
     _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinksRecorded];
     NSLog(@"drinks recorded is %d", drinksRecorded);
     _hoursOut.text = [NSString stringWithFormat:@"%.3d", 3];
+    _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
     [appDelegate setSesion:session];
 }
 

@@ -30,7 +30,15 @@
     return bac;
 }
 -(void)evaluateBAC{
-    
+    if (BACValue == 0) BACMessage = @"Sober as a bird";
+    else if (0.02 < BACValue < 0.03) BACMessage = @"Cheers to alcohol!";
+    else if (0.03 <= BACValue < 0.06) BACMessage = @"You're in the zone";
+    else if (0.06 <= BACValue < 0.08) BACMessage = @"Feelings of invincibility coming.";
+    else if (0.08 <= BACValue < 0.1) BACMessage = @"Over the legal driving limit!";
+    else if (0.1 <= BACValue < 0.2) BACMessage = @"You're drunk, at risk of alcohol poisoning, and should not drive!";
+    else if (0.2 <= BACValue < 0.3) BACMessage = @"You could black out at any time, and should not drive!";
+    else if (0.3 <= BACValue < 0.4) BACMessage = @"You're either unconscious or an alcoholic. Don't drive.";
+    else BACMessage = @"So ridiculously dead...";
 }
 -(void)calculateTimeTillSober{
     
@@ -42,6 +50,7 @@
     BACValue = newBAC;
 }
 -(NSString*) getBACMessage{
+    [self evaluateBAC];
     return BACMessage;
 }
 -(void)setBACMessage:(NSString*)newMessage{

@@ -44,7 +44,7 @@
     return BAC;
 }
 -(NSString*)getBACMessage{
-    return @"stub";
+    return [stats getBACMessage];
 }
 
 @end
