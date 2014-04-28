@@ -22,12 +22,16 @@
 }
 
 -(void)setGender:(NSInteger)newGender{
+    NSLog(@"Person - setGender");
+    NSLog(@"gender is %d", newGender);
     gender = newGender;
 }
 -(void)setAge:(double)newAge{
+    NSLog(@"Person - setAge");
     age = newAge;
 }
 -(void)setWeight:(double)newWeight{
+    NSLog(@"Person - setWeight");
     weight = newWeight;
 }
 -(void)checkStats{
@@ -41,6 +45,7 @@
     }
 }
 -(NSInteger)getGender{
+    NSLog(@"gender is %d", gender);
     return gender;
 }
 -(double)getWeight{

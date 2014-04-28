@@ -64,6 +64,7 @@
     NSLog(@"ProfileViewController - sendDataToPerson");
     //get data from entry fields
     NSInteger gender = _gender.selectedSegmentIndex;
+    NSLog(@"gender is %d", gender);
     double weight = [_weightField.text doubleValue];
     double age = [_ageField.text doubleValue];
     
@@ -82,6 +83,10 @@
     }
     
     //update data:
+    bigGender = &gender;
+    [person setGender:gender];
+    [person setWeight:weight];
+    [person setAge:age];
     //[(Person*)self.tabBarController setGender:gender];
     //[(Person*)self.tabBarController setWeight:weight];
     //[(Person*)self.tabBarController setAge:age];

@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    session = [[Session alloc] init];
+    person = [[Person alloc] init];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Session.h"
+#import "Person.h"
 
 @interface TabBarController : UIViewController{
     Session* session;
+    Person* person;
+    NSInteger* bigGender;
 }
 
 @end
