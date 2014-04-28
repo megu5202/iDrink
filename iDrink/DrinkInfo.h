@@ -8,27 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DrinkInfo : NSObject
+@interface DrinkInfo : NSObject{
+    NSString *name;
+    NSNumber *proof;
+    NSString *type;
+    NSString *subtype;
+    NSNumber *favorite;
+    NSMutableArray *commonAmts;
+}
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSNumber *proof;
-@property (nonatomic, retain) NSString *type;
-@property (nonatomic, retain) NSString *subtype;
-@property (nonatomic, retain) NSNumber *favorite;
-@property (nonatomic, retain) NSMutableArray *commonAmts;
+-(NSString*)getName;
+-(void)setName:(NSString*)newName;
+-(NSNumber*)getproof;
+-(void)setproof:(NSNumber*)newProof;
 
-+(NSString*)getName;
-+(void)setName:(NSString*)name;
-+(NSNumber*)getproof;
-+(void)setproof:(NSNumber*)proof;
+-(NSString*)getType;
+-(void)setType:(NSString*)newType;
 
-+(NSString*)getType;
-+(void)setType:(NSString*)type;
+-(NSString*)getSubType;
+-(void)setSubType:(NSString*)newSubtype;
 
-+(NSString*)getSubType;
-+(void)setSubType:(NSString*)subtype;
-
-+(NSNumber*)getFavorite;
-+(void)setFavorite:(NSNumber*)favorite;
+-(NSNumber*)getFavorite;
+-(void)setFavorite:(NSNumber*)newFavorite;
 
 @end

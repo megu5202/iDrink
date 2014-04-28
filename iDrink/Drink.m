@@ -10,4 +10,22 @@
 
 @implementation Drink
 
+-(void)setDrinkInfo:(DrinkInfo*)info{
+    
+}
+-(DrinkInfo*)getDrinkInfo{
+    return drink;
+}
+-(void)setAmount:(NSNumber*)newAmount{
+    amount = newAmount;
+}
+-(void)setTime:(NSDate*)newTime{
+    time = newTime;
+}
+-(NSDate*)getTime{
+    return time;
+}
+//-(void)setLocation:(Location*)location;
+
+
 @end
