@@ -36,6 +36,7 @@
 
 /* called when background is tapped */
 - (void)dismissKeyboard{
+    NSLog(@"ProfileViewController - dismissKeyboard");
     [_weightField resignFirstResponder];
     [_ageField resignFirstResponder];
     //[self sendDataToTabViewController];
@@ -43,12 +44,14 @@
 
 /* called when "DONE" button is pressed in keyboard */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"ProfileViewController - textFieldShouldReturn");
     [textField resignFirstResponder];
     //[self sendDataToTabViewController];
     return NO;
 }
 
 -(IBAction)genderChanged:(UISegmentedControl *)sender{
+    NSLog(@"ProfileViewController - genderChanged");
     //Call Person.setGender(kjshdfkj)
 }
 
