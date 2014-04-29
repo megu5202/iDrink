@@ -51,7 +51,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"AddDrinkListViewController - tableView");
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
@@ -70,6 +70,7 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    [self performSegueWithIdentifier:@"drinkNameSegue" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
