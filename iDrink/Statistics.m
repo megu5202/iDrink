@@ -25,7 +25,7 @@
     else{
         bodyWaterConstant = 0.58;
     }
-    bac = ((.806 * numDrinks * 1.2)/(bodyWaterConstant * weightInKilos)) - (.017 * drinkingPeriod);
+    bac = ((.806 * numDrinks * 1.2)/(bodyWaterConstant * weightInKilos)) - (.017 * hoursPassed);
     [self setBACNumber:bac];
     return bac;
 }
