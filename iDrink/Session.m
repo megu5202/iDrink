@@ -60,6 +60,9 @@
         hours--;
     }
 }
+-(int)getHours{
+    return hours;
+}
 -(void)addHours{
     hours+= 1;
 }
