@@ -16,6 +16,11 @@
 		3B00110F191039F7003D397A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A22AD2190DE2DD0019BD5D /* CoreGraphics.framework */; };
 		3B00111119103A06003D397A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B00111019103A06003D397A /* QuartzCore.framework */; };
 		3B00111319103A2F003D397A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B00111219103A2F003D397A /* ImageIO.framework */; };
+		3B00117119103E8F003D397A /* drunk.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B00116E19103E8F003D397A /* drunk.png */; };
+		3B00117219103E8F003D397A /* sober.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B00116F19103E8F003D397A /* sober.png */; };
+		3B00117319103E8F003D397A /* veryDrunk.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B00117019103E8F003D397A /* veryDrunk.jpeg */; };
+		3B001175191040BF003D397A /* ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B001174191040BF003D397A /* ambulance.png */; };
+		3B0011771910413E003D397A /* emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0011761910413E003D397A /* emergency.png */; };
 		3B154700190DEDBC009323C5 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F7190DEDBC009323C5 /* Drink.m */; };
 		3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F9190DEDBC009323C5 /* DrinkInfo.m */; };
 		3B154703190DEDBC009323C5 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FD190DEDBC009323C5 /* Session.m */; };
@@ -70,6 +75,11 @@
 		3B0010BC19103691003D397A /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "../../Downloads/CorePlot_1.4/Binaries/iOS/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		3B00111019103A06003D397A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B00111219103A2F003D397A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3B00116E19103E8F003D397A /* drunk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = drunk.png; path = iDrink/drunk.png; sourceTree = "<group>"; };
+		3B00116F19103E8F003D397A /* sober.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sober.png; path = iDrink/sober.png; sourceTree = "<group>"; };
+		3B00117019103E8F003D397A /* veryDrunk.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = veryDrunk.jpeg; path = iDrink/veryDrunk.jpeg; sourceTree = "<group>"; };
+		3B001174191040BF003D397A /* ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ambulance.png; path = iDrink/ambulance.png; sourceTree = "<group>"; };
+		3B0011761910413E003D397A /* emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emergency.png; path = iDrink/emergency.png; sourceTree = "<group>"; };
 		3B1546F6190DEDBC009323C5 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
 		3B1546F7190DEDBC009323C5 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		3B1546F8190DEDBC009323C5 /* DrinkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkInfo.h; sourceTree = "<group>"; };
@@ -154,7 +164,12 @@
 		3B0010B219103319003D397A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3B00116E19103E8F003D397A /* drunk.png */,
+				3B00116F19103E8F003D397A /* sober.png */,
+				3B00117019103E8F003D397A /* veryDrunk.jpeg */,
 				3B0010B31910336A003D397A /* beer-mug.png */,
+				3B0011761910413E003D397A /* emergency.png */,
+				3B001174191040BF003D397A /* ambulance.png */,
 				3B0010B41910336A003D397A /* clock.png */,
 				3B0010B51910336A003D397A /* gear.png */,
 				3B0010B61910336A003D397A /* line-chart.png */,
@@ -357,14 +372,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B00117219103E8F003D397A /* sober.png in Resources */,
+				3B001175191040BF003D397A /* ambulance.png in Resources */,
 				A1A22AEC190DE2DD0019BD5D /* Images.xcassets in Resources */,
 				3B0010B119103312003D397A /* user.png in Resources */,
 				3B0010BA1910336A003D397A /* line-chart.png in Resources */,
 				3B0010B91910336A003D397A /* gear.png in Resources */,
 				A11ABD86190F136900577BF5 /* drinks.plist in Resources */,
+				3B0011771910413E003D397A /* emergency.png in Resources */,
 				3B0010B71910336A003D397A /* beer-mug.png in Resources */,
 				A1A22ADB190DE2DD0019BD5D /* InfoPlist.strings in Resources */,
+				3B00117319103E8F003D397A /* veryDrunk.jpeg in Resources */,
 				3B0010B81910336A003D397A /* clock.png in Resources */,
+				3B00117119103E8F003D397A /* drunk.png in Resources */,
 				A1A22AE4190DE2DD0019BD5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

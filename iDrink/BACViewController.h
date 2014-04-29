@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *bacMessage;
 @property (weak, nonatomic) IBOutlet UILabel *timeTillSober;
 @property CLLocation *location;
+@property (weak, nonatomic) IBOutlet UIImageView *drunkIcon;
 
 
 - (IBAction)addDrinkButton:(UIButton *)sender;

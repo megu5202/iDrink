@@ -16,7 +16,7 @@
 
 @implementation BACViewController
 @synthesize location;
-
+@synthesize drunkIcon;
 
 - (void)updateLabels{
     NSLog(@"BACViewController - updateLabels");
@@ -29,6 +29,9 @@
     //test bac calc
     [session calcBAC:weight :gender :hours];
     double bac = [session getBAC];
+    if (isnan(bac)){
+        bac = 0.000;
+    }
     int drinks = [session getNumDrinks];
     NSString *BACMessage = [session getBACMessage];
     
@@ -39,6 +42,14 @@
     _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinks];
     _hoursOut.text = [NSString stringWithFormat:@"%.3d", hours];
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
+    if(bac >= .08){
+        UIImage* photo = [UIImage imageNamed:[NSString stringWithFormat:@"drunk.png"]];
+        drunkIcon.image = photo;
+    }
+    else{
+        UIImage* photo = [UIImage imageNamed:[NSString stringWithFormat:@"sober.png"]];
+        drunkIcon.image = photo;
+    }
     
     [appDelegate setSession:session];
 }
