@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UsageSettings.h"
 
 @interface Person : NSObject{
     double weight;
     NSInteger gender;
     double matabRate;
     double age;
-    //UsageSettings *usageSettings;
-    NSInteger alarm;
-    NSString* phoneNumber;
+    UsageSettings *usageSettings;
 }
 //old function
 //new refactored functions
