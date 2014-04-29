@@ -58,6 +58,7 @@
     //ADD CODE TO ADD DRINK TO THE DRINKS LIST HERE IF IT ISNT ALREADY NICK*****************
     NSDate *now = [NSDate date];
     [session addDrink:@"drinkTest" :now];
+    [self calculateBAC];
     [self updateLabels];
 }
 
