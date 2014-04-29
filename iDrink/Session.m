@@ -24,12 +24,12 @@
     return self;
 }
 
--(void)addDrink: (NSString*)drinkName : (NSDate*)time : (CLLocation*)location
+-(void)addDrink: (NSString*)drinkName : (NSDate*)time /*: (CLLocation*)location*/
 {
     numDrinks += 1;
     [drinksDrank addObject:drinkName];
     [timesDrank addObject:time];
-    [locationsDrank addObject:location];
+    //[locationsDrank addObject:location];
     
 }
 

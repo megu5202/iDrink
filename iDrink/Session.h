@@ -20,7 +20,7 @@
     int hours;
 }
 
--(void)addDrink: (NSString*)drinkName : (NSDate*)time: (CLLocation*)location;
+-(void)addDrink: (NSString*)drinkName : (NSDate*)time/*: (CLLocation*)location*/;
 -(void)removeDrink;
 
 -(void)addHours;
@@ -36,7 +36,7 @@
 
 -(NSMutableArray*)getDrinksDrank;
 -(NSMutableArray*)getTimesDrank;
--(NSMutableArray*)getLocationsDrank;
+//-(NSMutableArray*)getLocationsDrank;
 
 
 

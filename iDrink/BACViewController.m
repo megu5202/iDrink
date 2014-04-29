@@ -63,7 +63,7 @@
     
     NSDate *now = [NSDate date];
     //find current location here
-    [session addDrink:@"drinkTest" :now: location];
+    [session addDrink:@"drinkTest" :now /*:location*/];
     [self calculateBAC];
     [self updateLabels];
 }
@@ -114,6 +114,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"BACViewController - viewWillAppear");
     [self updateLabels];
+    [self CurrentLocationIdentifier];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -127,6 +128,7 @@
 {
     location = [locations lastObject];
     NSLog(@"lat%f - lon%f", location.coordinate.latitude, location.coordinate.longitude);
+    [locationManager stopUpdatingLocation];
 }
 
 /*
