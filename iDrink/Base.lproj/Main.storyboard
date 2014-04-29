@@ -430,11 +430,14 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="zpa-DR-Ovc" id="Rht-zD-lRq"/>
-                            <outlet property="delegate" destination="zpa-DR-Ovc" id="OeA-ra-vQm"/>
+                            <outlet property="dataSource" destination="zpa-DR-Ovc" id="aga-JE-s8Q"/>
+                            <outlet property="delegate" destination="zpa-DR-Ovc" id="XUh-kJ-mFw"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="iWV-BW-ecN"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ed3-pp-5Zm" id="Ypb-yI-YdE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qba-ty-a3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

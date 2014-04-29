@@ -9,7 +9,11 @@
 #import "TabBarController.h"
 
 @interface AddDrinkListViewController : UITableViewController
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate>{
+    NSIndexPath *iPath;
+}
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property(strong, nonatomic)NSMutableArray *drinkList;
 @property(weak, nonatomic) NSString *currentDrinkType;

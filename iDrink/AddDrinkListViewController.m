@@ -64,24 +64,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"AddDrinkListViewController - didSelectRowAtIndexPath");
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    iPath = indexPath;
     [self performSegueWithIdentifier:@"drinkNameSegue" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"AddDrinkListViewController - prepareForSegue");
-    if ([segue.identifier isEqualToString: @"drinkSegue"]) {
+    if ([segue.identifier isEqualToString: @"drinkNameSegue"]) {
         DrinkViewController *drinkViewController = segue.destinationViewController;
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
         NSArray *rowData = drinkData;
-        drinkViewController.title = [rowData objectAtIndex:indexPath.row];
-        drinkViewController.name = [rowData objectAtIndex:indexPath.row];
+        drinkViewController.title = [rowData objectAtIndex:iPath.row];
+        drinkViewController.name = [rowData objectAtIndex:iPath.row];
         drinkViewController.drinkType = _currentDrinkType;
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle: _currentDrinkType
                                                                        style: UIBarButtonItemStyleBordered

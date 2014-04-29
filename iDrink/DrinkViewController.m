@@ -54,7 +54,7 @@
     //get the current time
     NSDate *now = [NSDate date];
     //send time, and 1 drink increase to updateData
-    [self sendDataToTabViewController: @"drink name" : now];
+    [self sendDataToTabViewController:_name  : now];
     //go back to add a drink screen or send an alert saying a drink was added
     [self sendAlert:@"Congrats!" :@"Drink was recorded"];
 }
