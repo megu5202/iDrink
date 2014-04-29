@@ -12,7 +12,7 @@
 
 
 -(double)calculateBAC: (double)weight :(NSInteger)gender :(int)numDrinks :(double)hoursPassed{
-    NSLog(@"updateBAC");
+    NSLog(@"Statistics- CalculateBAC");
     double bac = 0;
     double bodyWaterConstant = 0;
     double drinkingPeriod = 1;
