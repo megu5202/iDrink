@@ -15,6 +15,7 @@
     double age;
     //UsageSettings *usageSettings;
     NSInteger alarm;
+    NSString* phoneNumber;
 }
 //old function
 //new refactored functions
@@ -26,5 +27,9 @@
 -(NSInteger)getGender;
 -(double)getWeight;
 -(double)getAge;
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+-(NSString*)getPhoneNumber;
+
+-(void)updateUsageSettings: (BOOL)locationTracker : (BOOL)drinkingAlarm : (BOOL)drivingSensor : (NSString*)newPhoneNumber;
+
+//@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @end
