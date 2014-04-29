@@ -54,6 +54,15 @@
     [self updateLabels];
 }
 
+- (IBAction)removeDrinkButton:(UIButton *)sender {
+}
+
+- (IBAction)addHourButton:(UIButton *)sender {
+}
+
+- (IBAction)removeHourButton:(UIButton *)sender {
+}
+
 /* first time this view is loaded after the app starts */
 - (void)viewDidLoad{
     NSLog(@"BACViewController - viewDidLoad");
