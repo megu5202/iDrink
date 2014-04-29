@@ -9,7 +9,7 @@
 #import "Person.h"
 
 @implementation Person
-@synthesize managedObjectContext;
+//@synthesize managedObjectContext;
 
 - (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage{
     UIAlertView* alertView = [[UIAlertView alloc]
@@ -24,7 +24,6 @@
 
 -(void)setGender:(NSInteger)newGender{
     NSLog(@"Person - setGender");
-    NSLog(@"gender is %d", newGender);
     gender = newGender;
 }
 -(void)setAge:(double)newAge{
@@ -46,7 +45,6 @@
     }
 }
 -(NSInteger)getGender{
-    NSLog(@"gender is %d", gender);
     return gender;
 }
 -(double)getWeight{
@@ -54,5 +52,9 @@
 }
 -(double)getAge{
     return age;
+}
+
+-(void)updateUsageSettings: (BOOL)locationTracking : (BOOL)drinkingAlarm : (BOOL)drivingSensor{
+    
 }
 @end

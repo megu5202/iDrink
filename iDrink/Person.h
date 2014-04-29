@@ -26,5 +26,8 @@
 -(NSInteger)getGender;
 -(double)getWeight;
 -(double)getAge;
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+
+-(void)updateUsageSettings: (BOOL)locationTracker : (BOOL)drinkingAlarm : (BOOL)drivingSensor;
+
+//@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @end

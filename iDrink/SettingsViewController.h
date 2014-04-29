@@ -10,4 +10,10 @@
 
 @interface SettingsViewController : TabBarController
 
+- (IBAction)trackLocation:(UISwitch *)sender;
+- (IBAction)stopDrinkingAlarm:(UISwitch *)sender;
+- (IBAction)senseDriving:(UISwitch *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *emergencyContactField;
+
+
 @end
