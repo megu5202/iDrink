@@ -11,6 +11,14 @@
 @implementation Person
 //@synthesize managedObjectContext;
 
+- (id)init{
+    self = [super init];
+    if(self){
+        [[UsageSettings alloc]init];
+    }
+    return self;
+}
+
 - (void) sendAlert:(NSString *) alertTitle : (NSString *) alertMessage{
     UIAlertView* alertView = [[UIAlertView alloc]
                               initWithTitle: alertTitle
@@ -56,14 +64,12 @@
 
 -(NSString*)getPhoneNumber{
     NSLog(@"Person - getPhoneNumber");
-    NSLog(@"phoneNumber in Person is ");
-    NSLog(phoneNumber);
-    return phoneNumber;
+    return [usageSettings getPhoneNumber];
 }
 
 -(void)updateUsageSettings: (BOOL)locationTracking : (BOOL)drinkingAlarm : (BOOL)drivingSensor : (NSString*)newPhoneNumber{
     NSLog(@"Person - updateUsageSettings");
-    phoneNumber = newPhoneNumber;
-    
+    [usageSettings setPhoneNumber:newPhoneNumber];
+    [usageSettings setAlarm:drinkingAlarm];
 }
 @end

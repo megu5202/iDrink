@@ -13,6 +13,7 @@
 		3B154704190DEDBC009323C5 /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FF190DEDBC009323C5 /* Statistics.m */; };
 		3B154707190DEE2C009323C5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B154706190DEE2C009323C5 /* Person.m */; };
 		3B5AAA50190EB95B0067B033 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5AAA4F190EB95B0067B033 /* CoreData.framework */; };
+		3B5AAA9C190F56ED0067B033 /* UsageSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5AAA9B190F56ED0067B033 /* UsageSettings.m */; };
 		A11ABD84190F114D00577BF5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ABD83190F114D00577BF5 /* MapKit.framework */; };
 		A11ABD86190F136900577BF5 /* drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = A11ABD85190F136900577BF5 /* drinks.plist */; };
 		A11ABD8C190F182900577BF5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11ABD8B190F182900577BF5 /* MapViewController.m */; };
@@ -61,6 +62,8 @@
 		3B154705190DEE2C009323C5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		3B154706190DEE2C009323C5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		3B5AAA4F190EB95B0067B033 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B5AAA9A190F56ED0067B033 /* UsageSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsageSettings.h; sourceTree = "<group>"; };
+		3B5AAA9B190F56ED0067B033 /* UsageSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsageSettings.m; sourceTree = "<group>"; };
 		A11ABD83190F114D00577BF5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A11ABD85190F136900577BF5 /* drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drinks.plist; sourceTree = "<group>"; };
 		A11ABD8A190F182900577BF5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -143,10 +146,10 @@
 				A11ABD8E190F184800577BF5 /* AddDrinkListViewController.m */,
 				A11ABD90190F186C00577BF5 /* DrinkViewController.h */,
 				A11ABD91190F186C00577BF5 /* DrinkViewController.m */,
-				A11ABD8A190F182900577BF5 /* MapViewController.h */,
-				A11ABD8B190F182900577BF5 /* MapViewController.m */,
 				A1B9D572190F28DA002D656F /* ExtrasViewController.h */,
 				A1B9D573190F28DA002D656F /* ExtrasViewController.m */,
+				A11ABD8A190F182900577BF5 /* MapViewController.h */,
+				A11ABD8B190F182900577BF5 /* MapViewController.m */,
 			);
 			name = "view contollers";
 			sourceTree = "<group>";
@@ -190,6 +193,8 @@
 				A1A22ADF190DE2DD0019BD5D /* AppDelegate.h */,
 				A1A22AE0190DE2DD0019BD5D /* AppDelegate.m */,
 				3B154708190DEE43009323C5 /* view contollers */,
+				3B5AAA9A190F56ED0067B033 /* UsageSettings.h */,
+				3B5AAA9B190F56ED0067B033 /* UsageSettings.m */,
 				3B154705190DEE2C009323C5 /* Person.h */,
 				3B154706190DEE2C009323C5 /* Person.m */,
 				3B1546F6190DEDBC009323C5 /* Drink.h */,
@@ -338,6 +343,7 @@
 				3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */,
 				A1A22B11190DE53F0019BD5D /* AddDrinkViewController.m in Sources */,
 				A1A22B13190DE53F0019BD5D /* ProfileViewController.m in Sources */,
+				3B5AAA9C190F56ED0067B033 /* UsageSettings.m in Sources */,
 				A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */,
 				A11ABD8F190F184800577BF5 /* AddDrinkListViewController.m in Sources */,
 				A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */,

@@ -53,6 +53,15 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"AddThirdViewController - tableView didSelectRowAtIndexPath");
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+    /*UIStoryboardSegue *segue;
+    AddDrinkListViewController *controller = [[AddDrinkListViewController alloc]init];
+    segue = [segue initWithIdentifier:@"drinkTypeSegue" source:self destination:controller];
+    controller = segue.destinationViewController;
+    NSArray *rowData = [drinkTypeData allKeys];
+    controller.title = [rowData objectAtIndex:indexPath.row];
+    controller.currentDrinkType = [rowData objectAtIndex:indexPath.row];
+    controller.drinkList = [drinkTypeData objectForKey:controller.title];*/
+    [self performSegueWithIdentifier:@"drinkTypeSegue" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -70,6 +79,7 @@
                                                                       target: nil
                                                                       action: nil];
         self.navigationItem.backBarButtonItem = backButton;
+        NSLog(@"title is %ld", (long)indexPath.row);
     }
 }
 
