@@ -55,12 +55,15 @@
 }
 
 - (IBAction)removeDrinkButton:(UIButton *)sender {
+    [session removeDrink];
 }
 
 - (IBAction)addHourButton:(UIButton *)sender {
+    [session addHours];
 }
 
 - (IBAction)removeHourButton:(UIButton *)sender {
+    [session removeHours];
 }
 
 /* first time this view is loaded after the app starts */
