@@ -42,8 +42,12 @@
     _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinks];
     _hoursOut.text = [NSString stringWithFormat:@"%.3d", hours];
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
-    if(bac >= .001){
+    if(bac >= .001 && bac < .200){
         UIImage* photo = [UIImage imageNamed:[NSString stringWithFormat:@"drunk.png"]];
+        drunkIcon.image = photo;
+    }
+    else if (bac >= .200){
+        UIImage* photo = [UIImage imageNamed:[NSString stringWithFormat:@"dead-man-hi.png"]];
         drunkIcon.image = photo;
     }
     else{
