@@ -50,25 +50,19 @@
 }
 
 /* this function tells the view controller to deselect the previously selected data */
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+/*- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"AddThirdViewController - tableView didSelectRowAtIndexPath");
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
-    /*UIStoryboardSegue *segue;
-    AddDrinkListViewController *controller = [[AddDrinkListViewController alloc]init];
-    segue = [segue initWithIdentifier:@"drinkTypeSegue" source:self destination:controller];
-    controller = segue.destinationViewController;
-    NSArray *rowData = [drinkTypeData allKeys];
-    controller.title = [rowData objectAtIndex:indexPath.row];
-    controller.currentDrinkType = [rowData objectAtIndex:indexPath.row];
-    controller.drinkList = [drinkTypeData objectForKey:controller.title];*/
     [self performSegueWithIdentifier:@"drinkTypeSegue" sender:self];
-}
+}*/
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"AddThirdViewController - prepareForSegue");
     if ([segue.identifier isEqualToString:@"drinkTypeSegue"]){
-        AddDrinkListViewController *drinkListViewController = segue.destinationViewController;
+        AddDrinkListViewController *drinkListViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSLog(@"indexPath row is %d", indexPath.row);
+        NSLog(@"indexPath section is %d", indexPath.section);
         NSArray *rowData = [drinkTypeData allKeys];
         drinkListViewController.title = [rowData objectAtIndex:indexPath.row];
         drinkListViewController.currentDrinkType = [rowData objectAtIndex:indexPath.row];
