@@ -34,8 +34,11 @@
 }
 
 -(void)removeDrink{
-    if(numDrinks <= 1){
+    if(numDrinks >= 1){
         numDrinks-=1;
+        [drinksDrank removeLastObject];
+        [timesDrank removeLastObject];
+        //[locationsDrank removeLastObject];
     }
 }
 
