@@ -29,7 +29,7 @@
 
 -(void)removeDrink{
     if(numDrinks <= 1){
-        numDrinks--;
+        numDrinks-=1;
     }
 }
 
@@ -57,7 +57,7 @@
 
 -(void)removeHours{
     if(hours <=1){
-        hours--;
+        hours-= 1;
     }
 }
 -(int)getHours{
