@@ -10,7 +10,6 @@
 #import "AppDelegate.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
-
 @interface BACViewController : TabBarController
 <CLLocationManagerDelegate>
 {
