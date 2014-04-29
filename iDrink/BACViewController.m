@@ -20,8 +20,7 @@
     NSInteger gender = [person getGender];
     double weight = [person getWeight];
     double age = [person getAge];
-    //int hours = [session getHours];
-    int hours = 3;
+    int hours = [session getHours];
     
     //test bac calc
     [session calcBAC:weight :gender :hours];
@@ -29,7 +28,7 @@
     int drinks = [session getNumDrinks];
     NSString *BACMessage = [session getBACMessage];
     
-    _genderOut.text = [NSString stringWithFormat:@"%d", gender];
+    _genderOut.text = [NSString stringWithFormat:@"%ld", (long)gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
     _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
@@ -38,6 +37,13 @@
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
     
     [appDelegate setSession:session];
+}
+
+- (void)calculateBAC{
+    double weight = [person getWeight];
+    NSInteger gender = [person getGender];
+    int hours = [session getHours];
+    [session calcBAC:weight :gender :hours];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -57,16 +63,19 @@
 
 - (IBAction)removeDrinkButton:(UIButton *)sender {
     [session removeDrink];
+    [self calculateBAC];
     [self updateLabels];
 }
 
 - (IBAction)addHourButton:(UIButton *)sender {
     [session addHours];
+    [self calculateBAC];
     [self updateLabels];
 }
 
 - (IBAction)removeHourButton:(UIButton *)sender {
     [session removeHours];
+    [self calculateBAC];
     [self updateLabels];
 }
 
