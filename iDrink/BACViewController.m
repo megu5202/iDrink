@@ -20,20 +20,21 @@
     NSInteger gender = [person getGender];
     double weight = [person getWeight];
     double age = [person getAge];
-    int hourCount = 3;
+    //int hours = [session getHours];
+    int hours = 3;
     
     //test bac calc
-    [session calcBAC:weight :gender :hourCount];
+    [session calcBAC:weight :gender :hours];
     double bac = [session getBAC];
-    int drinksRecorded = [session getNumDrinks];
+    int drinks = [session getNumDrinks];
     NSString *BACMessage = [session getBACMessage];
     
     _genderOut.text = [NSString stringWithFormat:@"%d", gender];
     _weightOut.text = [NSString stringWithFormat:@"%.3f", weight];
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
     _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
-    _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinksRecorded];
-    _hoursOut.text = [NSString stringWithFormat:@"%.3d", hourCount];
+    _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinks];
+    _hoursOut.text = [NSString stringWithFormat:@"%.3d", hours];
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
     
     [appDelegate setSession:session];
@@ -56,14 +57,17 @@
 
 - (IBAction)removeDrinkButton:(UIButton *)sender {
     [session removeDrink];
+    [self updateLabels];
 }
 
 - (IBAction)addHourButton:(UIButton *)sender {
     [session addHours];
+    [self updateLabels];
 }
 
 - (IBAction)removeHourButton:(UIButton *)sender {
     [session removeHours];
+    [self updateLabels];
 }
 
 /* first time this view is loaded after the app starts */
