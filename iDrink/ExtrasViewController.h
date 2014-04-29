@@ -10,6 +10,6 @@
 
 @interface ExtrasViewController : TabBarController
 
-@property (nonatomic, retain) IBOutlet UIButton *settingsButton;
+- (IBAction)callEmergencyContact:(UIButton *)sender;
 
 @end

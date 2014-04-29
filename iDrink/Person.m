@@ -54,7 +54,11 @@
     return age;
 }
 
--(void)updateUsageSettings: (BOOL)locationTracking : (BOOL)drinkingAlarm : (BOOL)drivingSensor{
-    
+-(NSString*)getPhoneNumber{
+    return phoneNumber;
+}
+
+-(void)updateUsageSettings: (BOOL)locationTracking : (BOOL)drinkingAlarm : (BOOL)drivingSensor : (NSString*)newPhoneNumber{
+    phoneNumber = newPhoneNumber;
 }
 @end

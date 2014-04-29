@@ -12,6 +12,7 @@
     BOOL locationTracker; //0 off, 1 on
     BOOL drinkingAlarm; //0 off, 1 on
     BOOL drivingSensor; //0 off, 1 on
+    NSString* phoneNumber;
 }
 
 @end
@@ -28,11 +29,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    //hook up background tap to dismiss keyboard function
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget: self
-                                   action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];
     // Do any additional setup after loading the view.
 }
 
@@ -42,7 +38,8 @@
 }
 
 -(void)sendDataToPerson{
-    [person updateUsageSettings:locationTracker :drinkingAlarm :drivingSensor];
+    NSLog(@"SettingsViewController - sendDataToPerson");
+    [person updateUsageSettings:locationTracker :drinkingAlarm :drivingSensor: phoneNumber];
 }
 
 - (IBAction)trackLocation:(UISwitch *)sender {
@@ -78,13 +75,52 @@
     [self sendDataToPerson];
 }
 
-/* called when background is tapped */
-/* i.e. when weight or age is changed */
-- (void)dismissKeyboard{
-    NSLog(@"ProfileViewController - dismissKeyboard");
+- (void)displayPerson:(ABRecordRef)selectedPerson{
+    NSLog(@"SettingsViewController - displayPerson");
+    NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(selectedPerson, kABPersonFirstNameProperty);
+    self.firstName.text = name;
+    
+    phoneNumber = nil;
+    ABMultiValueRef phoneNumbers = ABRecordCopyValue(selectedPerson, kABPersonPhoneProperty);
+    if (ABMultiValueGetCount(phoneNumbers) > 0) {
+        phoneNumber = (__bridge_transfer NSString*)ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+    } else {
+        phoneNumber = @"[None]";
+    }
+    
+    self.phoneNumber.text = phoneNumber;
+    CFRelease(phoneNumbers);
     [self sendDataToPerson];
-    [_emergencyContactField resignFirstResponder];
 }
+
+- (IBAction)showPicker:(id)sender{
+    NSLog(@"SettingsViewController - showPicker");
+    ABPeoplePickerNavigationController *picker =
+    [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)selectedPerson {
+    
+    [self displayPerson:selectedPerson];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    return NO;
+}
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier{
+    return NO;
+}
+
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation
