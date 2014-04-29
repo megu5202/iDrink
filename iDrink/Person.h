@@ -15,6 +15,7 @@
     double age;
     //UsageSettings *usageSettings;
     NSInteger alarm;
+    
     NSString* phoneNumber;
 }
 //old function

@@ -55,10 +55,15 @@
 }
 
 -(NSString*)getPhoneNumber{
+    NSLog(@"Person - getPhoneNumber");
+    NSLog(@"phoneNumber in Person is ");
+    NSLog(phoneNumber);
     return phoneNumber;
 }
 
 -(void)updateUsageSettings: (BOOL)locationTracking : (BOOL)drinkingAlarm : (BOOL)drivingSensor : (NSString*)newPhoneNumber{
+    NSLog(@"Person - updateUsageSettings");
     phoneNumber = newPhoneNumber;
+    
 }
 @end
