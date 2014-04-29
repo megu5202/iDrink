@@ -7,12 +7,16 @@
 //
 
 #import "BACViewController.h"
+#import <UIKit/UIKit.h>
+
 
 @interface BACViewController ()
 
 @end
 
 @implementation BACViewController
+@synthesize location;
+
 
 - (void)updateLabels{
     NSLog(@"BACViewController - updateLabels");
@@ -58,7 +62,8 @@
     //ADD CODE TO ADD DRINK TO THE DRINKS LIST HERE IF IT ISNT ALREADY NICK*****************
     
     NSDate *now = [NSDate date];
-    [session addDrink:@"drinkTest" :now];
+    //find current location here
+    [session addDrink:@"drinkTest" :now: location];
     [self calculateBAC];
     [self updateLabels];
 }
@@ -90,7 +95,19 @@
     person = appDelegate.getPerson;
     session = appDelegate.getSession;
     
+    locationManager = [CLLocationManager new];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self CurrentLocationIdentifier];
+    
     [self updateLabels];
+}
+
+-(void)CurrentLocationIdentifier
+{
+
+    [locationManager startUpdatingLocation];
 }
 
 /* every time this view is loaded */
@@ -102,6 +119,14 @@
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//==================================================================================================
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    location = [locations lastObject];
+    NSLog(@"lat%f - lon%f", location.coordinate.latitude, location.coordinate.longitude);
 }
 
 /*

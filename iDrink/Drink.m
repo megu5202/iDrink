@@ -25,7 +25,12 @@
 -(NSDate*)getTime{
     return time;
 }
-//-(void)setLocation:(Location*)location;
+-(void)setLocation:(CLLocation*)drinkLocation{
+    location = drinkLocation;
+}
+- (CLLocation*)getLocation{
+    return location;
+}
 
 
 @end

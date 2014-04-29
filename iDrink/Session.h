@@ -13,13 +13,14 @@
 @interface Session : NSObject{
     NSMutableArray *drinksDrank;
     NSMutableArray *timesDrank;
+    NSMutableArray *locationsDrank;
     Statistics *stats;
     Drink *drink;
     int numDrinks;
     int hours;
 }
 
--(void)addDrink: (NSString*)drinkName : (NSDate*)time;
+-(void)addDrink: (NSString*)drinkName : (NSDate*)time: (CLLocation*)location;
 -(void)removeDrink;
 
 -(void)addHours;
@@ -35,6 +36,7 @@
 
 -(NSMutableArray*)getDrinksDrank;
 -(NSMutableArray*)getTimesDrank;
+-(NSMutableArray*)getLocationsDrank;
 
 
 
