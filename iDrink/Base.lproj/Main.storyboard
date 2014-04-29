@@ -273,8 +273,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sober.png" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-ib-11G">
-                                <rect key="frame" x="58" y="85" width="205" height="197"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph.png" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-ib-11G">
+                                <rect key="frame" x="42" y="69" width="286" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -578,8 +578,8 @@
         <image name="emergency.png" width="232" height="232"/>
         <image name="first" width="30" height="30"/>
         <image name="gear.png" width="26" height="26"/>
+        <image name="graph.png" width="600" height="463"/>
         <image name="line-chart.png" width="30" height="24"/>
-        <image name="sober.png" width="256" height="256"/>
         <image name="user.png" width="300" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

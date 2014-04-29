@@ -21,6 +21,7 @@
 		3B00117319103E8F003D397A /* veryDrunk.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B00117019103E8F003D397A /* veryDrunk.jpeg */; };
 		3B001175191040BF003D397A /* ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B001174191040BF003D397A /* ambulance.png */; };
 		3B0011771910413E003D397A /* emergency.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0011761910413E003D397A /* emergency.png */; };
+		3B0011791910464D003D397A /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0011781910464D003D397A /* graph.png */; };
 		3B154700190DEDBC009323C5 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F7190DEDBC009323C5 /* Drink.m */; };
 		3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F9190DEDBC009323C5 /* DrinkInfo.m */; };
 		3B154703190DEDBC009323C5 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FD190DEDBC009323C5 /* Session.m */; };
@@ -80,6 +81,7 @@
 		3B00117019103E8F003D397A /* veryDrunk.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = veryDrunk.jpeg; path = iDrink/veryDrunk.jpeg; sourceTree = "<group>"; };
 		3B001174191040BF003D397A /* ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ambulance.png; path = iDrink/ambulance.png; sourceTree = "<group>"; };
 		3B0011761910413E003D397A /* emergency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emergency.png; path = iDrink/emergency.png; sourceTree = "<group>"; };
+		3B0011781910464D003D397A /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graph.png; path = iDrink/graph.png; sourceTree = "<group>"; };
 		3B1546F6190DEDBC009323C5 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
 		3B1546F7190DEDBC009323C5 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		3B1546F8190DEDBC009323C5 /* DrinkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkInfo.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		3B0010B219103319003D397A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3B0011781910464D003D397A /* graph.png */,
 				3B00116E19103E8F003D397A /* drunk.png */,
 				3B00116F19103E8F003D397A /* sober.png */,
 				3B00117019103E8F003D397A /* veryDrunk.jpeg */,
@@ -381,6 +384,7 @@
 				A11ABD86190F136900577BF5 /* drinks.plist in Resources */,
 				3B0011771910413E003D397A /* emergency.png in Resources */,
 				3B0010B71910336A003D397A /* beer-mug.png in Resources */,
+				3B0011791910464D003D397A /* graph.png in Resources */,
 				A1A22ADB190DE2DD0019BD5D /* InfoPlist.strings in Resources */,
 				3B00117319103E8F003D397A /* veryDrunk.jpeg in Resources */,
 				3B0010B81910336A003D397A /* clock.png in Resources */,

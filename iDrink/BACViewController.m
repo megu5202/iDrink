@@ -42,14 +42,14 @@
     _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinks];
     _hoursOut.text = [NSString stringWithFormat:@"%.3d", hours];
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
-    if(bac >= .08){
+    /*if(bac >= .08){
         UIImage* photo = [UIImage imageNamed:[NSString stringWithFormat:@"drunk.png"]];
         drunkIcon.image = photo;
     }
     else{
         UIImage* photo = [UIImage imageNamed:[NSString stringWithFormat:@"sober.png"]];
         drunkIcon.image = photo;
-    }
+    }*/
     
     [appDelegate setSession:session];
 }
