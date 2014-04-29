@@ -17,17 +17,13 @@
 - (void)updateLabels{
     NSLog(@"BACViewController - updateLabels");
     
-    AppDelegate *appDelegate=[[UIApplication sharedApplication] delegate];
-    person = appDelegate.getPerson;
-    session = appDelegate.getSession;
-    
     NSInteger gender = [person getGender];
     double weight = [person getWeight];
     double age = [person getAge];
+    int hourCount = 3;
     
     //test bac calc
-    [session addDrink];
-    [session calcBAC:weight :gender :3];
+    [session calcBAC:weight :gender :hourCount];
     double bac = [session getBAC];
     int drinksRecorded = [session getNumDrinks];
     NSString *BACMessage = [session getBACMessage];
@@ -37,9 +33,9 @@
     _ageOut.text = [NSString stringWithFormat:@"%.3f", age];
     _bacNumber.text = [NSString stringWithFormat:@"%.3f", bac];
     _drinkCountOut.text = [NSString stringWithFormat:@"%.3d", drinksRecorded];
-    NSLog(@"drinks recorded is %d", drinksRecorded);
-    _hoursOut.text = [NSString stringWithFormat:@"%.3d", 3];
+    _hoursOut.text = [NSString stringWithFormat:@"%.3d", hourCount];
     _bacMessage.text = [NSString stringWithFormat:@"%@", BACMessage];
+    
     [appDelegate setSession:session];
 }
 
@@ -51,10 +47,21 @@
     return self;
 }
 
+- (IBAction)addDrinkButton:(UIButton *)sender {
+    NSDate *now = [NSDate date];
+    [session addDrink:@"drinkTest" :now];
+    [self updateLabels];
+}
+
 /* first time this view is loaded after the app starts */
 - (void)viewDidLoad{
     NSLog(@"BACViewController - viewDidLoad");
     [super viewDidLoad];
+    
+    appDelegate=[[UIApplication sharedApplication] delegate];
+    person = appDelegate.getPerson;
+    session = appDelegate.getSession;
+    
     [self updateLabels];
 }
 
@@ -79,5 +86,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

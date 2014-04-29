@@ -1,20 +1,21 @@
 //
-//  TabBarController.m
+//  ExtrasViewController.m
 //  iDrink
 //
-//  Created by Melissa on 4/27/14.
+//  Created by Melissa on 4/28/14.
 //  Copyright (c) 2014 Melissa. All rights reserved.
 //
 
-#import "TabBarController.h"
+#import "ExtrasViewController.h"
 
-@interface TabBarController ()
+@interface ExtrasViewController ()
 
 @end
 
-@implementation TabBarController
+@implementation ExtrasViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -22,14 +23,14 @@
     return self;
 }
 
-- (void)viewDidLoad{
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    session = [[Session alloc] init];
-    person = [[Person alloc] init];
 }
 
-- (void)didReceiveMemoryWarning{
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

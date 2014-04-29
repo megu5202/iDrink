@@ -36,6 +36,7 @@
 		A1A22B11190DE53F0019BD5D /* AddDrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B0C190DE53F0019BD5D /* AddDrinkViewController.m */; };
 		A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B0E190DE53F0019BD5D /* BACViewController.m */; };
 		A1A22B13190DE53F0019BD5D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A22B10190DE53F0019BD5D /* ProfileViewController.m */; };
+		A1B9D574190F28DA002D656F /* ExtrasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B9D573190F28DA002D656F /* ExtrasViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		A1A22B0E190DE53F0019BD5D /* BACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACViewController.m; sourceTree = "<group>"; };
 		A1A22B0F190DE53F0019BD5D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		A1A22B10190DE53F0019BD5D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A1B9D572190F28DA002D656F /* ExtrasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtrasViewController.h; sourceTree = "<group>"; };
+		A1B9D573190F28DA002D656F /* ExtrasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtrasViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				A11ABD91190F186C00577BF5 /* DrinkViewController.m */,
 				A11ABD8A190F182900577BF5 /* MapViewController.h */,
 				A11ABD8B190F182900577BF5 /* MapViewController.m */,
+				A1B9D572190F28DA002D656F /* ExtrasViewController.h */,
+				A1B9D573190F28DA002D656F /* ExtrasViewController.m */,
 			);
 			name = "view contollers";
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				A1A22AE1190DE2DD0019BD5D /* AppDelegate.m in Sources */,
 				A11ABD8F190F184800577BF5 /* AddDrinkListViewController.m in Sources */,
 				A1A22B12190DE53F0019BD5D /* BACViewController.m in Sources */,
+				A1B9D574190F28DA002D656F /* ExtrasViewController.m in Sources */,
 				A1A22B0A190DE33E0019BD5D /* TabBarController.m in Sources */,
 				3B154703190DEDBC009323C5 /* Session.m in Sources */,
 				3B154707190DEE2C009323C5 /* Person.m in Sources */,

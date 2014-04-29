@@ -7,9 +7,14 @@
 //
 
 #import "TabBarController.h"
+#import "AppDelegate.h"
 
 @interface DrinkViewController : UIViewController
-<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+    AppDelegate *appDelegate;
+    Session* session;
+    Person* person;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *_drinkName;
 @property (weak, nonatomic) IBOutlet UILabel *_drinkABV;

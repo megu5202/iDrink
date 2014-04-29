@@ -17,37 +17,26 @@
 
 @implementation AddDrinkViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad{
-    NSLog(@"AddDrinkViewController - viewDidLoad");
     [super viewDidLoad];
     /* load plist data into drinkTypeData dictionary */
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *plistPath = [bundle pathForResource: @"drinks" ofType: @"plist"];
     drinkTypeData = [[NSMutableDictionary alloc] initWithContentsOfFile: plistPath];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"AddThirdViewController - viewWillAppear");
 }
 
 /* two functions required by UITableViewDataSource */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"AddDrinkViewController - tableView numberOfRowsInSection");
+    NSLog(@"AddThirdViewController - tableView numberOfRowsInSection");
     return [drinkTypeData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"AddDrinkViewController - tableView cellForRowAtIndexPath");
+    NSLog(@"AddThirdViewController - tableView cellForRowAtIndexPath");
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     if (cell == nil) {
@@ -62,12 +51,12 @@
 
 /* this function tells the view controller to deselect the previously selected data */
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"AddDrinkViewController - tableView didSelectRowAtIndexPath");
-    //[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+    NSLog(@"AddThirdViewController - tableView didSelectRowAtIndexPath");
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"AddDrinkViewController - prepareForSegue");
+    NSLog(@"AddThirdViewController - prepareForSegue");
     if ([segue.identifier isEqualToString:@"drinkTypeSegue"]){
         AddDrinkListViewController *drinkListViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -84,15 +73,9 @@
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-*/
 
 @end

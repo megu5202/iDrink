@@ -21,6 +21,4 @@
 - (IBAction)genderChanged:(UISegmentedControl *)sender;
 - (IBAction)frequencyChanged:(UISegmentedControl *)sender;
 
-@property (nonatomic, retain) IBOutlet UIButton *settingsButton;
-
 @end

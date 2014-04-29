@@ -35,6 +35,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    appDelegate=[[UIApplication sharedApplication] delegate];
+    person = appDelegate.getPerson;
+    session = appDelegate.getSession;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -43,20 +46,15 @@
     __drinkDetails.text = _details;
 }
 
-- (void)sendDataToTabViewController: (double) drinksToAdd : (NSDate *) currentTime{
-    //[(MADTabViewController*)self.tabBarController updateDrinksAndHours:drinksToAdd :currentTime];
-    //[(MADTabViewController*)self.tabBarController updateBAC];
-    //double bac = [(MADTabViewController*)self.tabBarController getBAC];
-    //[(MADTabViewController*)self.tabBarController updateDrunkenness: bac];
-    //increment the number of drinks
-    //add hours?
+- (void)sendDataToTabViewController: (NSString*) drinkName : (NSDate *) currentTime{
+    [session addDrink: drinkName : currentTime];
 }
 
 - (IBAction)drinkButton:(id)sender {
     //get the current time
     NSDate *now = [NSDate date];
     //send time, and 1 drink increase to updateData
-    [self sendDataToTabViewController: 1 : now];
+    [self sendDataToTabViewController: @"drink name" : now];
     //go back to add a drink screen or send an alert saying a drink was added
     [self sendAlert:@"Congrats!" :@"Drink was recorded"];
 }

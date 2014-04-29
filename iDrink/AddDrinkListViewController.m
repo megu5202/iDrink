@@ -36,10 +36,7 @@
     [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     // Return the number of sections.
@@ -62,15 +59,28 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"AddDrinkListViewController - didSelectRowAtIndexPath");
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSLog(@"MADDrinkListViewController - prepareForSegue");
+    NSLog(@"AddDrinkListViewController - prepareForSegue");
     if ([segue.identifier isEqualToString: @"drinkSegue"]) {
         DrinkViewController *drinkViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSArray *rowData = drinkData;
-        //drinkViewController.title = [rowData objectAtIndex:indexPath.row];
-        //drinkViewController.name = [rowData objectAtIndex:indexPath.row];
-        //drinkViewController.drinkType = _currentDrinkType;
+        drinkViewController.title = [rowData objectAtIndex:indexPath.row];
+        drinkViewController.name = [rowData objectAtIndex:indexPath.row];
+        drinkViewController.drinkType = _currentDrinkType;
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle: _currentDrinkType
                                                                        style: UIBarButtonItemStyleBordered
                                                                       target: nil

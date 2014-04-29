@@ -17,7 +17,7 @@
     int numDrinks;
 }
 
--(void)addDrink;
+-(void)addDrink: (NSString*)drinkName : (NSDate*)time;
 -(void)removeDrink;
 
 -(int)getNumDrinks;

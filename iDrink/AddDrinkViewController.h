@@ -8,6 +8,7 @@
 
 #import "TabBarController.h"
 
-@interface AddDrinkViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+@interface AddDrinkViewController : UITableViewController
+<UITableViewDataSource, UITableViewDelegate>
 
 @end

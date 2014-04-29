@@ -9,7 +9,9 @@
 #import "TabBarController.h"
 #import "AppDelegate.h"
 
-@interface BACViewController : TabBarController
+@interface BACViewController : TabBarController{
+    AppDelegate *appDelegate;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *genderOut;
 @property (weak, nonatomic) IBOutlet UILabel *weightOut;
@@ -19,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *bacNumber;
 @property (weak, nonatomic) IBOutlet UILabel *bacMessage;
 @property (weak, nonatomic) IBOutlet UILabel *timeTillSober;
+
+- (IBAction)addDrinkButton:(UIButton *)sender;
 
 @end

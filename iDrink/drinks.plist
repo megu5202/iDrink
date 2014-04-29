@@ -4,6 +4,13 @@
 <dict>
 	<key>Beer</key>
 	<array>
+		<string>Sunshine Wheat</string>
+		<string>Miller Lite</string>
+		<string>Miller High Life</string>
+		<string>Coors Light</string>
+		<string>Coors</string>
+		<string>Budweiser</string>
+		<string>Blue Moon Belgian White</string>
 		<string>Dogfish Head 90 Minute IPA</string>
 		<string>Dogfish Head 60 Minute IPA</string>
 		<string>Sierra Nevada Pale Ale</string>
@@ -24,6 +31,17 @@
 	</array>
 	<key>Mixed Drinks</key>
 	<array>
+		<string>Vodka RedBull</string>
+		<string>Sex on the Beach</string>
+		<string>Irish Coffee</string>
+		<string>Hot Toddy</string>
+		<string>Sake Bomb</string>
+		<string>Irish Car Bomb</string>
+		<string>Piña Colada</string>
+		<string>Mai Tai</string>
+		<string>Mudslide</string>
+		<string>Long Island Iced Tea</string>
+		<string>Manhattan</string>
 		<string>Screwdriver</string>
 		<string>White Russian</string>
 		<string>Whiskey and Cola</string>
@@ -35,6 +53,15 @@
 	</array>
 	<key>Shots</key>
 	<array>
+		<string>Patron Silver Tequila</string>
+		<string>Don Julio Tequila</string>
+		<string>Johnnie Walker Black</string>
+		<string>Captain Morgan Rum</string>
+		<string>Bacardi Rum</string>
+		<string>Ketel One Vodka</string>
+		<string>Van Gogh Vodka</string>
+		<string>Grey Goose Vodka</string>
+		<string>Absolut Vodka</string>
 		<string>Jack Daniels Whiskey</string>
 		<string>Jack Daniels Honey Whiskey</string>
 		<string>Malibu White Rum</string>
