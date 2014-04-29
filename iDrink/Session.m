@@ -17,6 +17,7 @@
         stats = [[Statistics alloc]init];
         drink = [[Drink alloc]init];
         numDrinks = 0;
+        hours = 0;
     }
     return self;
 }
@@ -52,6 +53,15 @@
 
 -(NSString*)getBACMessage{
     return [stats getBACMessage];
+}
+
+-(void)removeHours{
+    if(hours <=1){
+        hours--;
+    }
+}
+-(void)addHours{
+    hours+= 1;
 }
 
 @end
