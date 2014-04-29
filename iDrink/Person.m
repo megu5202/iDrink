@@ -14,7 +14,7 @@
 - (id)init{
     self = [super init];
     if(self){
-        [[UsageSettings alloc]init];
+        usageSettings = [[UsageSettings alloc]init];
     }
     return self;
 }

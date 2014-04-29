@@ -45,7 +45,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     // Return the number of rows in the section.
-    NSLog(@"number of rows in table %d", [drinkData count]);
+    NSLog(@"number of rows in table %lu", (unsigned long)[drinkData count]);
     return [drinkData count];
 }
 

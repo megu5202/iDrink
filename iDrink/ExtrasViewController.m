@@ -27,8 +27,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     phoneNumber = [person getPhoneNumber];
-    NSLog(@"phoneNumber in Extras is ");
-    NSLog(phoneNumber);
+    NSLog(@"phoneNumber in Extras is %@", phoneNumber);
     // Do any additional setup after loading the view.
 }
 

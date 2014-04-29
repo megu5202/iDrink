@@ -15,7 +15,7 @@
     NSLog(@"Statistics- CalculateBAC");
     double bac = 0;
     double bodyWaterConstant = 0;
-    double drinkingPeriod = 1;
+    //double drinkingPeriod = 1;
     double weightInKilos = weight/2.20462;
     NSInteger genderComp = 1;
     
