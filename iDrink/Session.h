@@ -24,7 +24,7 @@
 -(void)addHours;
 -(int)removeHours;
 
--(void)getNumDrinks;
+-(int)getNumDrinks;
 -(void)setNumDrinks:(int)newNumDrinks;
 
 -(double)getBAC;
