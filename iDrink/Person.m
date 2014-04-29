@@ -63,10 +63,12 @@
 }
 
 -(NSString*)getPhoneNumber{
+    NSLog(@"Person - getPhoneNumber");
     return [usageSettings getPhoneNumber];
 }
 
 -(void)updateUsageSettings: (BOOL)locationTracking : (BOOL)drinkingAlarm : (BOOL)drivingSensor : (NSString*)newPhoneNumber{
+    NSLog(@"Person - updateUsageSettings");
     [usageSettings setPhoneNumber:newPhoneNumber];
     [usageSettings setAlarm:drinkingAlarm];
 }

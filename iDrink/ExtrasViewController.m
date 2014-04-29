@@ -8,7 +8,9 @@
 
 #import "ExtrasViewController.h"
 
-@interface ExtrasViewController ()
+@interface ExtrasViewController (){
+    NSString* phoneNumber;
+}
 
 @end
 
@@ -24,6 +26,9 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    phoneNumber = [person getPhoneNumber];
+    NSLog(@"phoneNumber in Extras is ");
+    NSLog(phoneNumber);
     // Do any additional setup after loading the view.
 }
 
@@ -33,7 +38,7 @@
 }
 
 - (IBAction)callEmergencyContact:(UIButton *)sender {
-    NSString* phNo = [person getPhoneNumber];
+    NSString* phNo = phoneNumber;
     //NSString *phNo = @"+919876543210";
     NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
     

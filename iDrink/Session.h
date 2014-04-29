@@ -16,10 +16,15 @@
     Statistics *stats;
     Drink *drink;
     int numDrinks;
+    int hours;
 }
 
 -(void)addDrink: (NSString*)drinkName : (NSDate*)time;
 -(void)removeDrink;
+
+-(void)addHours;
+-(void)removeHours;
+-(int)getHours;
 
 -(int)getNumDrinks;
 -(void)setNumDrinks:(int)newNumDrinks;

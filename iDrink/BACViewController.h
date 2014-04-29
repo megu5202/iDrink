@@ -23,5 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeTillSober;
 
 - (IBAction)addDrinkButton:(UIButton *)sender;
+- (IBAction)removeDrinkButton:(UIButton *)sender;
+- (IBAction)addHourButton:(UIButton *)sender;
+- (IBAction)removeHourButton:(UIButton *)sender;
 
 @end

@@ -18,6 +18,7 @@
         stats = [[Statistics alloc]init];
         drink = [[Drink alloc]init];
         numDrinks = 0;
+        hours = 0;
     }
     return self;
 }
@@ -30,7 +31,7 @@
 
 -(void)removeDrink{
     if(numDrinks <= 1){
-        numDrinks--;
+        numDrinks-=1;
     }
 }
 
@@ -64,5 +65,17 @@
     return timesDrank;
 }
 
+
+-(void)removeHours{
+    if(hours <=1){
+        hours-= 1;
+    }
+}
+-(int)getHours{
+    return hours;
+}
+-(void)addHours{
+    hours+= 1;
+}
 
 @end
