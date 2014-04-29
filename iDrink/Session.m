@@ -74,7 +74,7 @@
 
 
 -(void)removeHours{
-    if(hours <=1){
+    if(hours >=1){
         hours-= 1;
     }
 }

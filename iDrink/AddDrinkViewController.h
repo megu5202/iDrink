@@ -9,6 +9,9 @@
 #import "TabBarController.h"
 
 @interface AddDrinkViewController : UITableViewController
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate>{
+    NSIndexPath *iPath;
+}
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

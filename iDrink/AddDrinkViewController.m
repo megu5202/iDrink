@@ -50,22 +50,25 @@
 }
 
 /* this function tells the view controller to deselect the previously selected data */
-/*- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"AddThirdViewController - tableView didSelectRowAtIndexPath");
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
-    [self performSegueWithIdentifier:@"drinkTypeSegue" sender:self];
-}*/
+    iPath = indexPath;
+    //NSLog(@"indexPath row is %d", iPath.row);
+    //NSLog(@"indexPath section is %d", iPath.section);
+    [self performSegueWithIdentifier:@"drinkTypeSegue" sender:nil];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"AddThirdViewController - prepareForSegue");
     if ([segue.identifier isEqualToString:@"drinkTypeSegue"]){
         AddDrinkListViewController *drinkListViewController = [segue destinationViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSLog(@"indexPath row is %d", indexPath.row);
-        NSLog(@"indexPath section is %d", indexPath.section);
+        NSIndexPath *indexPath = [[self tableView] indexPathForSelectedRow];
         NSArray *rowData = [drinkTypeData allKeys];
-        drinkListViewController.title = [rowData objectAtIndex:indexPath.row];
-        drinkListViewController.currentDrinkType = [rowData objectAtIndex:indexPath.row];
+        //NSLog(@"indexPath row is %d", indexPath.row);
+        //NSLog(@"indexPath section is %d", indexPath.section);
+        drinkListViewController.title = [rowData objectAtIndex:iPath.row];
+        drinkListViewController.currentDrinkType = [rowData objectAtIndex:iPath.row];
         drinkListViewController.drinkList = [drinkTypeData objectForKey:drinkListViewController.title];
         /* set back button to be shorter so that it fits nicely */
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle: @"Drink Type"
