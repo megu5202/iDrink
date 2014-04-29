@@ -13,6 +13,11 @@
 @end
 
 @implementation MapViewController
+@synthesize drinksDrank;
+@synthesize timesDrank;
+@synthesize toolBar;
+@synthesize didViewDidLoad;
+@synthesize session;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +31,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.mapView setDelegate:self];
+    _mapView.showsUserLocation = NO;
+    
+    appDelegate=[[UIApplication sharedApplication] delegate];
+    session = appDelegate.getSession;
+    drinksDrank = [session getDrinksDrank];
+    timesDrank = [session getTimesDrank];
+    
+    if(drinksDrank.count > 0){
+        for(int i=0; i<drinksDrank.count; i++)
+        {
+            
+        }
+    }
+    
+    
+
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    drinksDrank = [session getDrinksDrank];
+    timesDrank = [session getTimesDrank];
+    [self.mapView reloadInputViews];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,6 +62,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)changeMapType:(id)sender {
+    if(_mapView.mapType == MKMapTypeStandard){
+        _mapView.mapType = MKMapTypeSatellite;
+    }
+    else {
+        _mapView.mapType = MKMapTypeStandard;
+    }
+}
+
 
 /*
 #pragma mark - Navigation

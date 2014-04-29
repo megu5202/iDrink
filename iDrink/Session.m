@@ -14,6 +14,8 @@
     self = [super init];
     if(self){
         drinksDrank = [[NSMutableArray alloc]init];
+        timesDrank = [[NSMutableArray alloc]init];
+        locationsDrank = [[NSMutableArray alloc]init];
         stats = [[Statistics alloc]init];
         drink = [[Drink alloc]init];
         numDrinks = 0;
@@ -22,14 +24,21 @@
     return self;
 }
 
--(void)addDrink: (NSString*)drinkName : (NSDate*)time{
+-(void)addDrink: (NSString*)drinkName : (NSDate*)time /*: (CLLocation*)location*/
+{
     numDrinks += 1;
     [drinksDrank addObject:drinkName];
+    [timesDrank addObject:time];
+    //[locationsDrank addObject:location];
+    
 }
 
 -(void)removeDrink{
-    if(numDrinks <= 1){
+    if(numDrinks >= 1){
         numDrinks-=1;
+        [drinksDrank removeLastObject];
+        [timesDrank removeLastObject];
+        //[locationsDrank removeLastObject];
     }
 }
 
@@ -54,6 +63,15 @@
 -(NSString*)getBACMessage{
     return [stats getBACMessage];
 }
+
+-(NSMutableArray*)getDrinksDrank{
+    return drinksDrank;
+}
+
+-(NSMutableArray*)getTimesDrank{
+    return timesDrank;
+}
+
 
 -(void)removeHours{
     if(hours <=1){

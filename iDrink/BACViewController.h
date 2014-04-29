@@ -8,9 +8,15 @@
 
 #import "TabBarController.h"
 #import "AppDelegate.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface BACViewController : TabBarController{
+
+@interface BACViewController : TabBarController
+<CLLocationManagerDelegate>
+{
     AppDelegate *appDelegate;
+    CLLocationManager *locationManager;
+    CLLocation *currentLocation;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *genderOut;
@@ -21,10 +27,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *bacNumber;
 @property (weak, nonatomic) IBOutlet UILabel *bacMessage;
 @property (weak, nonatomic) IBOutlet UILabel *timeTillSober;
+@property CLLocation *location;
+
 
 - (IBAction)addDrinkButton:(UIButton *)sender;
 - (IBAction)removeDrinkButton:(UIButton *)sender;
 - (IBAction)addHourButton:(UIButton *)sender;
 - (IBAction)removeHourButton:(UIButton *)sender;
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1121A116190F7A3700EDB432 /* ConsumedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1121A115190F7A3700EDB432 /* ConsumedListTableViewController.m */; };
 		3B154700190DEDBC009323C5 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F7190DEDBC009323C5 /* Drink.m */; };
 		3B154701190DEDBC009323C5 /* DrinkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546F9190DEDBC009323C5 /* DrinkInfo.m */; };
 		3B154703190DEDBC009323C5 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1546FD190DEDBC009323C5 /* Session.m */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1121A114190F7A3700EDB432 /* ConsumedListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumedListTableViewController.h; sourceTree = "<group>"; };
+		1121A115190F7A3700EDB432 /* ConsumedListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumedListTableViewController.m; sourceTree = "<group>"; };
 		3B1546F6190DEDBC009323C5 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
 		3B1546F7190DEDBC009323C5 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		3B1546F8190DEDBC009323C5 /* DrinkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkInfo.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				A1B9D573190F28DA002D656F /* ExtrasViewController.m */,
 				A11ABD8A190F182900577BF5 /* MapViewController.h */,
 				A11ABD8B190F182900577BF5 /* MapViewController.m */,
+				1121A114190F7A3700EDB432 /* ConsumedListTableViewController.h */,
+				1121A115190F7A3700EDB432 /* ConsumedListTableViewController.m */,
 			);
 			name = "view contollers";
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				3B154703190DEDBC009323C5 /* Session.m in Sources */,
 				3B154707190DEE2C009323C5 /* Person.m in Sources */,
 				3B154700190DEDBC009323C5 /* Drink.m in Sources */,
+				1121A116190F7A3700EDB432 /* ConsumedListTableViewController.m in Sources */,
 				A11ABD92190F186C00577BF5 /* DrinkViewController.m in Sources */,
 				A1A22ADD190DE2DD0019BD5D /* main.m in Sources */,
 				A19AA841190F07FF00E39788 /* SettingsViewController.m in Sources */,

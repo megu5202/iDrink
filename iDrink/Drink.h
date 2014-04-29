@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DrinkInfo.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface Drink : NSObject{
     DrinkInfo *drink;
     NSNumber *amount;
     NSDate *time;
-    //Location *location;
+    CLLocation *location;
 }
 
 -(void)setDrinkInfo:(DrinkInfo*)info;
@@ -21,5 +23,6 @@
 -(void)setAmount:(NSNumber*)newAmount;
 -(void)setTime:(NSDate*)newTime;
 -(NSDate*)getTime;
-//-(void)setLocation:(Location*)location;
+-(void)setLocation:(CLLocation*)drinkLocation;
+-(CLLocation*)getLocation;
 @end
