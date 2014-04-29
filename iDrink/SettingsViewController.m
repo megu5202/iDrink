@@ -12,7 +12,7 @@
     BOOL locationTracker; //0 off, 1 on
     BOOL drinkingAlarm; //0 off, 1 on
     BOOL drivingSensor; //0 off, 1 on
-    NSString* phoneNumber;
+    NSString* localPhoneNumber;
 }
 
 @end
@@ -39,7 +39,7 @@
 
 -(void)sendDataToPerson{
     NSLog(@"SettingsViewController - sendDataToPerson");
-    [person updateUsageSettings:locationTracker :drinkingAlarm :drivingSensor: phoneNumber];
+    [person updateUsageSettings:locationTracker :drinkingAlarm :drivingSensor: localPhoneNumber];
 }
 
 - (IBAction)trackLocation:(UISwitch *)sender {
@@ -80,15 +80,15 @@
     NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(selectedPerson, kABPersonFirstNameProperty);
     self.firstName.text = name;
     
-    phoneNumber = nil;
+    localPhoneNumber = nil;
     ABMultiValueRef phoneNumbers = ABRecordCopyValue(selectedPerson, kABPersonPhoneProperty);
     if (ABMultiValueGetCount(phoneNumbers) > 0) {
-        phoneNumber = (__bridge_transfer NSString*)ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
+        localPhoneNumber = (__bridge_transfer NSString*)ABMultiValueCopyValueAtIndex(phoneNumbers, 0);
     } else {
-        phoneNumber = @"[None]";
+        localPhoneNumber = @"[None]";
     }
     
-    self.phoneNumber.text = phoneNumber;
+    self.phoneNumber.text = localPhoneNumber;
     CFRelease(phoneNumbers);
     [self sendDataToPerson];
 }

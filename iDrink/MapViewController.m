@@ -19,8 +19,7 @@
 @synthesize didViewDidLoad;
 @synthesize session;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -28,8 +27,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     [self.mapView setDelegate:self];
     _mapView.showsUserLocation = NO;
@@ -40,15 +38,10 @@
     timesDrank = [session getTimesDrank];
     
     if(drinksDrank.count > 0){
-        for(int i=0; i<drinksDrank.count; i++)
-        {
+        for(int i=0; i<drinksDrank.count; i++){
             
         }
     }
-    
-    
-
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -57,8 +50,7 @@
     [self.mapView reloadInputViews];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -72,6 +64,13 @@
     }
 }
 
+- (void)displayMap{
+    
+}
+
+- (void)reset{
+    
+}
 
 /*
 #pragma mark - Navigation

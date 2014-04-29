@@ -27,5 +27,5 @@
 
 - (IBAction)changeMapType:(id)sender;
 - (void)displayMap;
--(void)reset;
+- (void)reset;
 @end
